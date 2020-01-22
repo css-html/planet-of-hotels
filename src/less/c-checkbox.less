@@ -1,0 +1,89 @@
+/* .c-checkbox
+---------------------------------------------------------------*/
+& {
+    @r: ~ '.c-checkbox';
+
+    // base
+    //-----------------------------------------------------------
+    @{r} {
+
+        input {
+            display: none;
+        }
+
+        &__label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        &__title {
+            color: @gray-dark;
+            line-height: 1.2;
+            transition: .3s;
+        }
+
+        &__icon {
+            display: flex;
+            align-self: flex-start;
+            height: 14px;
+            min-width: 14px;
+            margin-right: 20px;
+            position: relative;
+            background-color: @gray-light;
+            transition: .3s;
+
+            &:before {
+                top: 0;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                width: 60%;
+                height: 25%;
+                bottom: 20%;
+                content: '';
+                margin: auto;
+                position: absolute;
+                will-change: transform;
+                border-left: 1px solid @white;
+                border-bottom: 1px solid @white;
+                transform: rotate(-45deg) scale(0);
+                transition: .3s;
+            }
+        }
+
+        :checked {
+
+            ~ @{r}__title {
+                color: @purple;
+            }
+
+            ~ @{r}__icon {
+                background-color: @purple;
+
+                &:before {
+                    opacity: 1;
+                    transform: rotate(-45deg) scale(1);
+                }
+            }
+        }
+
+        &:hover {
+
+            @{r}__icon {
+                background-color: @purple;
+            }
+
+            @{r}__title {
+                color: @purple;
+            }
+        }
+
+        // modifier
+        //-------------------------------------------------------
+    }
+
+    // influence
+    //-----------------------------------------------------------
+}

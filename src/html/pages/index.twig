@@ -1,0 +1,29 @@
+{% extends '../layout.twig' %}
+
+{% block head_title %}Index | Planet of Hotels{% endblock %}
+
+{% block body_class %}l-body{% endblock %}
+
+{% block body %}
+
+    <style>
+        ol {
+            margin: 20px;
+            font-family: monospace;
+        }
+        ol li + li {
+            margin-top: 6px;
+        }
+    </style>
+
+
+    <ol>
+        <li>
+            <a href="main.html" target="_blank" rel="nofollow">
+                main
+            </a>
+        </li>
+    </ol>
+
+
+{% endblock %}

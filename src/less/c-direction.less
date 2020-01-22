@@ -1,0 +1,214 @@
+/* .c-direction
+---------------------------------------------------------------*/
+& {
+    @r: ~ '.c-direction';
+
+    // base
+    //-----------------------------------------------------------
+    @{r} {
+        display: flex;
+
+        @media (max-width: 1151px) {
+            overflow-x: auto;
+        }
+
+        &__column {
+            min-width: 110px;
+            margin-right: 10px;
+
+            @media (min-width: 768px) {
+                margin-right: 20px;
+            }
+
+            @media (min-width: 1152px) {
+                .mixin-grid(6, 20px);
+            }
+        }
+
+        &__item {
+            display: block;
+            position: relative;
+
+            &:hover {
+
+                @{r}__arrow {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+
+                @{r}__title:before {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &__title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: @white;
+            font-size: 16px;
+            font-weight: 900;
+            line-height: 1.4;
+            text-align: center;
+            position: absolute;
+            background-color: rgba(0,0,0,.3);
+
+            @media (min-width: 768px) {
+                font-size: 18px;
+            }
+
+            @media (min-width: 1152px) {
+                font-size: 24px;
+            }
+
+            &:before {
+
+                @media (min-width: 1152px) {
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    content: '';
+                    position: absolute;
+                    box-shadow: inset 0 0 0 10px #fff, 0 0 10px 10px rgba(0,0,0,.1);
+                    opacity: 0;
+                    visibility: 0;
+                    transition: .3s;
+                }
+            }
+        }
+
+        &__arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: 0;
+            right: 0;
+            bottom: 10%;
+            width: 34px;
+            height: 34px;
+            margin: auto;
+            position: absolute;
+            border-radius: 100%;
+            opacity: 0;
+            visibility: 0;
+            transition: .3s;
+            transform: translateY(-20px);
+
+            @media (min-width: 1152px) {
+                background-color: rgba(255,255,255,.5);
+            }
+
+            &:before {
+                content: '';
+                width: 12px;
+                height: 12px;
+                margin-top: -3px;
+                border-right: 2px solid @white;
+                border-bottom: 2px solid @white;
+                transform: rotate(45deg);
+
+                @media (min-width: 1152px) {
+                    width: 10px;
+                    height: 10px;
+                    border-right: 1px solid @white;
+                    border-bottom: 1px solid @white;
+                }
+            }
+        }
+
+        &__country {
+            display: flex;
+            flex-direction: column;
+
+            @media (min-width: 1152px) {
+                align-items: center;
+            }
+        }
+
+        &__list {
+            padding-left: @gap;
+            padding-right: @gap;
+        }
+
+        &__grid {
+            column-count: 6;
+            column-gap: @gap * 2;
+
+            @media (max-width: 1151px) {
+                overflow-x: auto;
+                overflow-y: hidden;
+            }
+        }
+
+        &__block {
+            break-inside: avoid-column;
+            padding: 5px;
+            padding-right: 0;
+            position: relative;
+            transition: .3s;
+
+            &--link {
+                display: block;
+                color: inherit;
+                font-weight: 600;
+                position: relative;
+
+                &:before {
+
+                    @media (min-width: 1152px) {
+                        top: 7px;
+                        left: -12px;
+                        width: 5px;
+                        height: 5px;
+                        content: '';
+                        margin: auto;
+                        position: absolute;
+                        border-radius: 100%;
+                        background-color: @gray-dark;
+                        opacity: 0;
+                        transition: .3s;
+                    }
+                }
+
+                &:hover {
+
+                    @media (min-width: 1152px) {
+                        &:before {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            &--text {
+                font-size: 12px;
+                color: @gray-dark;
+                white-space: nowrap;
+
+                @media (min-width: 768px) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        // modifier
+        //-------------------------------------------------------
+    }
+
+    // influence
+    //-----------------------------------------------------------
+}
