@@ -95,6 +95,7 @@
         }
 
         &__arrow {
+            z-index: 1;
             width: @gap;
             height: @gap;
             margin: auto;
@@ -110,16 +111,16 @@
 
             &--prev {
                 top: 0;
-                bottom: 0;
                 left: -@gap;
+                bottom: 0;
                 border-left: 2px solid;
                 border-bottom: 2px solid;
             }
 
             &--next {
                 top: 0;
-                bottom: 0;
                 right: -@gap;
+                bottom: 0;
                 border-top: 2px solid;
                 border-right: 2px solid;
             }
@@ -128,38 +129,6 @@
                 border-color: @gray-dark;
             }
         }
-
-        // .slick-dots {
-        //     display: flex;
-        //     flex-wrap: wrap;
-        //     align-items: center;
-        //     justify-content: center;
-        //     margin: 0;
-        //     padding: 0;
-        //     padding-top: 40px;
-
-        //     li {
-        //         font-size: 0;
-        //         height: 10px;
-        //         min-width: 10px;
-        //         cursor: pointer;
-        //         list-style: none;
-        //         margin-top: 10px;
-        //         margin-right: 10px;
-        //         border-radius: 100%;
-        //         background-color: rgba(214, 219, 225, .75);
-        //         transition: background-color .3s;
-
-        //         &:hover {
-        //             background-color: #c1c9d4;
-        //         }
-        //     }
-
-        //     .slick-active {
-        //         pointer-events: none;
-        //         background-color: #c1c9d4;
-        //     }
-        // }
 
         &__hotels {
 
@@ -177,401 +146,45 @@
             }
         }
 
-        // &__count {
-        //     left: 0;
-        //     right: 0;
-        //     bottom: 40px;
-        //     margin: auto;
-        //     width: 100px;
-        //     height: 30px;
-        //     color: @black;
-        //     font-size: 12px;
-        //     position: absolute;
-        //     border-radius: 30px;
-        //     background-color: rgba(255, 255, 255, .8);
-        //     display: none;
-
-        //     @media (min-width: 768px) {
-        //         display: flex;
-        //         align-items: center;
-        //         justify-content: center;
-        //     }
-        // }
-
-        // &__quantity {
-        //     min-width: 34px;
-        //     text-align: center;
-        // }
-
-        // &__in-title {
-        //     z-index: 1;
-        //     font-size: 14px;
-        //     padding: 0 30px;
-        //     position: relative;
-        //     background-color: @white;
-        //     transform: translateX(-10px);
-        //     display: none;
-
-        //     @media (min-width: 1152px) {
-        //         display: flex;
-        //         align-items: center;
-        //     }
-        // }
-
-        // &__note {
-
-        //     .slick-dots {
-        //         padding-top: 10px;
-
-        //         @media (min-width: 768px) {
-        //             padding-top: 40px;
-        //         }
-        //     }
-        // }
-
-        // &__city {
-
-        //     @media (max-width: 767px) {
-        //         width: 100%;
-
-        //         a {
-        //             height: 250px;
-        //             display: block;
-        //         }
-
-        //         img {
-        //             width: 100%;
-        //             height: 100%;
-        //             object-fit: cover;
-        //         }
-        //     }
-        // }
-
-        // &__photo {
-
-        //     @media (max-width: 767px) {
-        //         margin-left: -16px;
-        //         margin-right: -16px;
-        //     }
-
-        //     &--thumbnail {
-        //         margin-top: 20px;
-        //         margin-left: -10px;
-        //         display: none;
-
-        //         @media (min-width: 768px) {
-        //             display: block;
-        //         }
-        //     }
-
-        //     &--item {
-        //         cursor: pointer;
-        //         padding-left: 10px;
-        //         transition: opacity .3s;
-
-        //         &:hover {
-        //             opacity: .7;
-        //         }
-        //     }
-
-        //     @{r}__next,
-        //     @{r}__prev {
-
-        //         @media (min-width: 768px) {
-        //             opacity: .8;
-
-        //             &:hover {
-        //                 opacity: 1;
-        //             }
-        //         }
-        //     }
-
-        //     @{r}__prev {
-
-        //         @media (min-width: 768px) {
-        //             left: 20px;
-        //         }
-        //     }
-
-        //     @{r}__next {
-
-        //         @media (min-width: 768px) {
-        //             right: 20px;
-        //         }
-        //     }
-        // }
-
-        // &__checkout {
-
-        //     @media (max-width: 767px) {
-        //         margin-left: -16px;
-        //         margin-right: -16px;
-        //     }
-
-        //     .slick-track {
-
-        //         @media (max-width: 767px) {
-        //             height: 280px;
-        //         }
-
-        //         img {
-        //             width: 100%;
-        //             height: 100%;
-        //             object-fit: cover;
-        //         }
-        //     }
-
-        //     &--thumbnail {
-        //         margin-top: 20px;
-        //         margin-left: -10px;
-        //         display: none;
-
-        //         @media (min-width: 768px) {
-        //             display: block;
-        //         }
-        //     }
-
-        //     &--item {
-        //         cursor: pointer;
-        //         padding-left: 10px;
-        //         transition: opacity .3s;
-
-        //         @media (min-width: 1152px) {
-        //             height: 84px;
-        //         }
-
-        //         img {
-        //             width: 100%;
-        //             height: 100%;
-        //             object-fit: cover;
-        //         }
-
-        //         &:hover {
-        //             opacity: .7;
-        //         }
-        //     }
-
-        //     .slick-dots {
-        //         left: 0;
-        //         right: 0;
-        //         bottom: 20px;
-        //         padding: 0;
-        //         margin: auto;
-        //         position: absolute;
-
-        //         .slick-active {
-        //             background-color: @white;
-        //         }
-        //     }
-
-        //     @{r}__next,
-        //     @{r}__prev {
-
-        //         @media (min-width: 768px) {
-        //             opacity: .8;
-
-        //             &:hover {
-        //                 opacity: 1;
-        //             }
-        //         }
-
-        //         &:before {
-        //             width: 14px;
-        //             height: 14px;
-        //             content: '';
-        //             border-top: 1px solid @black;
-        //         }
-        //     }
-
-        //     @{r}__prev {
-
-        //         @media (min-width: 768px) {
-        //             left: 20px;
-        //         }
-
-        //         &:before {
-        //             margin-left: 7px;
-        //             border-left: 1px solid @black;
-        //             transform: rotate(-45deg);
-        //         }
-        //     }
-
-        //     @{r}__next {
-
-        //         @media (min-width: 768px) {
-        //             right: 20px;
-        //         }
-
-        //         &:before {
-        //             margin-right: 7px;
-        //             border-right: 1px solid @black;
-        //             transform: rotate(45deg);
-        //         }
-        //     }
-        // }
-
-        // &__post {
-
-        //     @{r}__item {
-        //         padding: 0;
-
-        //         @media (min-width: 768px) {
-        //             width: calc(~ '50% - 10px') !important;
-
-        //             &:first-child {
-        //                 margin-right: 20px;
-        //             }
-        //         }
-
-        //         @media (min-width: 1152px) {
-        //             width: calc(~ '50% - 20px') !important;
-
-        //             &:first-child {
-        //                 margin-right: 40px;
-        //             }
-        //         }
-        //     }
-
-        //     img {
-        //         width: 100%;
-        //         height: 230px;
-        //         object-fit: cover;
-
-        //         @media (min-width: 768px) {
-        //             height: auto;
-        //         }
-        //     }
-
-        //     .slick-slide > div {
-        //         display: flex;
-        //     }
-
-        //     .slick-dots {
-        //         padding-top: 20px;
-        //         padding-bottom: 20px;
-        //     }
-        // }
-
-        // &--banner {
-
-        //     .slick-list {
-        //         height: 100vh; // fixed on javascript in safari
-        //     }
-
-        //     .slick-dots {
-        //         left: 0;
-        //         bottom: 34%;
-        //         position: absolute;
-        //         .mixin-container();
-
-        //         @media (min-width: 768px) {
-        //             display: flex;
-        //             flex-direction: column;
-        //             justify-content: center;
-        //             top: 0;
-        //             right: 0;
-        //             bottom: 0;
-        //             left: auto;
-        //             width: auto;
-        //             padding-bottom: 10vh;
-        //         }
-
-        //         li {
-        //             background-color: rgba(255,255,255,.3);
-
-        //             &.slick-active {
-        //                 background-color: @white;
-        //             }
-        //         }
-        //     }
-
-        //     .slick-active {
-        //         animation-name: fadeIn;
-        //         animation-duration: 2s;
-
-        //         img {
-        //             animation-name: banner;
-        //             animation-duration: 16s;
-        //         }
-        //     }
-        // }
-
-        // &__traveler {
-        //     margin-left: -10px;
-        //     width: calc(~ '100% + 20px');
-
-        //     a {
-        //         padding: 0 10px;
-        //     }
-
-        //     @{r}__prev {
-        //         left: -10px;
-        //     }
-
-        //     @{r}__next {
-        //         right: -10px;
-        //     }
-        // }
-
-        // &__weather {
-        //     margin-left: -5px;
-        //     width: calc(~ '100% + 10px');
-
-        //     .slick-slide {
-        //         margin: 0 5px;
-        //     }
-
-        //     @{r}__arrow {
-        //         width: 12px;
-        //         height: 12px;
-        //         border-width: 3px;
-
-        //         &--prev {
-        //             left: -14px;
-        //         }
-
-        //         &--next {
-        //             right: -14px;
-        //         }
-        //     }
-        // }
+        &__gallery {
+
+            @{r}__arrow {
+
+                @media (max-width: 1151px) {
+                    display: block;
+                }
+
+                &--prev {
+                    left: 16px;
+                    border-color: @white;
+                }
+
+                &--next {
+                    right: 16px;
+                    border-color: @white;
+                }
+            }
+        }
+
+        &__direction {
+            margin: 0;
+
+            // @{r}__arrow {
+
+            //     &--prev {
+            //         left: 0;
+            //     }
+
+            //     &--next {
+            //         right: 0;
+            //     }
+            // }
+        }
 
         // modifier
         //-------------------------------------------------------
-        // &--100vw {
-
-        //     @media (min-width: 1152px) {
-        //         left: 50%;
-        //         right: 50%;
-        //         width: 100vw;
-        //         position: relative;
-        //         margin-left: -50vw;
-        //         margin-right: -50vw;
-        //     }
-        // }
-
-        // &--relative {
-        //     position: relative;
-        // }
     }
 
     // influence
     //-----------------------------------------------------------
-    // .c-tiny {
-
-    //     @{r} + * {
-
-    //         @media (max-width: 767px) {
-    //             margin-top: 0;
-    //         }
-    //     }
-
-    //     &__content @{r} {
-
-    //         @media (max-width: 767px) {
-    //             margin-left: -@gap;
-    //             width: calc(~ '100% + @{gap}');
-    //         }
-    //     }
-    // }
 }

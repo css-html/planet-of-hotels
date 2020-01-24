@@ -149,19 +149,6 @@
         });
 
 
-        // .c-direction__item
-        // --------------------------------------------------------------
-        // $('[tabindex="1"]').focus();
-        // $('.c-direction__item--focus').keydown(function(){
-        //     $('.c-direction__item').removeClass('c-direction__item--focus');
-
-        // });
-        // $('.c-direction__item--focus').hover(function(){
-        //     $('.c-direction__item').blur();
-        //     $('.c-direction__item').removeClass('c-direction__item--focus');
-        // });
-
-
         // .c-booking__column
         // --------------------------------------------------------------
         $body.on('click', '.c-booking__column:not(.c-booking__column--submit)', function() {
@@ -324,6 +311,41 @@
         });
 
 
+        // .c-description
+        // --------------------------------------------------------------
+        $body.on('click', '.c-description__more', function() {
+            $(this)
+                .closest('.c-description')
+                .toggleClass('c-description--active')
+                .find('.c-description--hidden')
+                .slideToggle();
+        });
+
+
+        // .c-gallery__grid
+        // --------------------------------------------------------------
+        $('#c-gallery__grid').lightGallery();
+
+
+        // .c-gallery__arrow
+        // --------------------------------------------------------------
+        // $body.on('click', '.c-gallery__arrow--next', function() {
+        //     $('.c-gallery__item--active')
+        //         .next()
+        //         .addClass('c-gallery__item--active')
+        //         .siblings()
+        //         .removeClass('c-gallery__item--active');
+        // });
+
+        // $body.on('click', '.c-gallery__arrow--prev', function() {
+        //     $('.c-gallery__item--active')
+        //         .prev()
+        //         .addClass('c-gallery__item--active')
+        //         .siblings()
+        //         .removeClass('c-gallery__item--active');
+        // });
+
+
         // .c-slick
         // --------------------------------------------------------------
         $(window).resize(function() {
@@ -377,7 +399,8 @@
             responsive: [
                 {
                 breakpoint: 1151,
-                settings: "unslick"
+                arrows: false,
+                // settings: "unslick"
                 }
             ]
         });
@@ -398,6 +421,19 @@
                 }
             ]
         });
+
+
+        // .c-slick__hotels
+        // --------------------------------------------------------------
+        if ($(window).width() < 767) {
+            $('.c-slick__gallery').slick({
+                arrows: true,
+                infinite: true,
+                slidesPerRow: 1,
+                prevArrow: '<div class="c-slick__arrow c-slick__arrow--prev"></div>',
+                nextArrow: '<div class="c-slick__arrow c-slick__arrow--next"></div>',
+            });
+        }
 
 
     }); // end ready

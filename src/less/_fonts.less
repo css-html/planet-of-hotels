@@ -31,3 +31,14 @@
         src: url('../fonts/@{r}/@{r}__900.woff') format('woff');
     }
 }
+
+.mixin-font {
+    .var () { @r: ~ 'lg'; }.var;
+
+    @font-face {
+        font-weight: 400;
+        font-style: normal;
+        font-family: '@{r}';
+        src: url('../fonts/@{r}/@{r}.woff') format('woff');
+    }
+}

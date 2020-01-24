@@ -16,9 +16,13 @@
             margin-top: 40px;
         }
 
-        &:first-child:not(.l-row--mt-20):not(.l-row--mt-100) {
+        &:first-child:not([class*="l-row--mt"]) {
             margin-top: 0;
         }
+
+        // &:first-child:not(.l-row--mt-20):not(.l-row--mt-100) {
+        //     margin-top: 0;
+        // }
 
         // modifier
         //-------------------------------------------------------
@@ -75,14 +79,6 @@
                 margin-top: 80px;
             }
         }
-
-        // &--mt-100 {
-        //     margin-top: 50px;
-
-        //     @media (min-width: 1152px) {
-        //         margin-top: 100px;
-        //     }
-        // }
 
         &--mt-0-max-767 {
 
@@ -187,22 +183,6 @@
                 order: 1;
             }
         }
-
-        &--width-950 {
-            max-width: 950px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        &--line-height-2 {
-            line-height: 2;
-        }
-
-        // &--border-top {
-        //     margin-top: 40px;
-        //     padding-top: 40px;
-        //     border-top: 1px solid @gray-light;
-        // }
     }
 
     // influence

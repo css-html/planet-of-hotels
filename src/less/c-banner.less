@@ -13,6 +13,10 @@
             background-color: @purple;
         }
 
+        @media (min-width: 1152px) {
+            height: 100vh;
+        }
+
         &__wrap {
             display: flex;
             align-items: center;
@@ -20,9 +24,9 @@
             position: relative;
 
             @media (min-width: 1152px) {
+                height: 100%;
                 margin: 0 auto;
                 max-width: 940px;
-                height: 100vh !important;
             }
         }
 
@@ -73,7 +77,6 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                height: 100vh;
                 position: absolute;
             }
 
@@ -116,6 +119,12 @@
 
         // modifier
         //-------------------------------------------------------
+        &--70vh {
+
+            @media (min-width: 1152px) {
+                height: 70vh;
+            }
+        }
     }
 
     // influence

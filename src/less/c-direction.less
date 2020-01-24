@@ -31,6 +31,7 @@
 
             &:hover {
 
+                @{r}__more,
                 @{r}__arrow {
                     opacity: 1;
                     visibility: visible;
@@ -130,6 +131,33 @@
             }
         }
 
+        &__more {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: 0;
+            right: 0;
+            bottom: 10%;
+            color: @white;
+            font-size: 12px;
+            font-weight: 600;
+            position: absolute;
+            opacity: 0;
+            visibility: 0;
+            transition: .3s;
+            transform: translateY(-20px);
+
+            &:after {
+                width: 6px;
+                height: 6px;
+                content: '';
+                margin-left: 6px;
+                border-top: 2px solid;
+                border-right: 2px solid;
+                transform: rotate(45deg);
+            }
+        }
+
         &__country {
             display: flex;
             flex-direction: column;
@@ -140,43 +168,59 @@
         }
 
         &__list {
-            padding-left: @gap;
-            padding-right: @gap;
-        }
 
-        &__grid {
-            column-count: 6;
-            column-gap: @gap * 2;
-
-            @media (max-width: 1151px) {
-                overflow-x: auto;
-                overflow-y: hidden;
+            @media (min-width: 1152px) {
+                overflow: hidden;
             }
         }
 
+        &__grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
         &__block {
-            break-inside: avoid-column;
-            padding: 5px;
-            padding-right: 0;
-            position: relative;
-            transition: .3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+            margin-right: 10px;
+
+            @media (max-width: 767px) {
+                .mixin-grid(3, 10px);
+            }
+
+            @media (min-width: 768px) and (max-width: 1151px) {
+                .mixin-grid(5, 10px);
+            }
+
+            @media (min-width: 1152px) {
+                margin-top: 20px;
+                margin-right: 20px;
+                .mixin-grid(6, 20px);
+            }
 
             &--link {
-                display: block;
                 color: inherit;
                 font-weight: 600;
                 position: relative;
 
+                @media (min-width: 1152px) {
+                    display: flex;
+                    align-items: center;
+                }
+
                 &:before {
+                    display: none;
 
                     @media (min-width: 1152px) {
-                        top: 7px;
-                        left: -12px;
+                        display: block;
+                        flex: none;
                         width: 5px;
                         height: 5px;
                         content: '';
-                        margin: auto;
-                        position: absolute;
+                        margin-right: 5px;
+                        margin-left: -10px;
                         border-radius: 100%;
                         background-color: @gray-dark;
                         opacity: 0;
@@ -187,6 +231,7 @@
                 &:hover {
 
                     @media (min-width: 1152px) {
+
                         &:before {
                             opacity: 1;
                         }
