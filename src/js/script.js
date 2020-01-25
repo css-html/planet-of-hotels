@@ -329,11 +329,11 @@
 
         // .c-slick
         // --------------------------------------------------------------
-        $(window).resize(function() {
-            if ($(window).width() > 1151) {
-                $('.c-slick').slick('init');
-            }
-        });
+        // $(window).on('resize', function() {
+        //     if ($(window).width() > 1151) {
+        //         $('.c-slick').slick('init');
+        //     }
+        // });
 
 
         // .c-slick__gallery
