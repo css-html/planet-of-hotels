@@ -327,25 +327,6 @@
         $('#c-gallery__grid').lightGallery();
 
 
-        // .c-gallery__arrow
-        // --------------------------------------------------------------
-        // $body.on('click', '.c-gallery__arrow--next', function() {
-        //     $('.c-gallery__item--active')
-        //         .next()
-        //         .addClass('c-gallery__item--active')
-        //         .siblings()
-        //         .removeClass('c-gallery__item--active');
-        // });
-
-        // $body.on('click', '.c-gallery__arrow--prev', function() {
-        //     $('.c-gallery__item--active')
-        //         .prev()
-        //         .addClass('c-gallery__item--active')
-        //         .siblings()
-        //         .removeClass('c-gallery__item--active');
-        // });
-
-
         // .c-slick
         // --------------------------------------------------------------
         $(window).resize(function() {
@@ -353,6 +334,19 @@
                 $('.c-slick').slick('init');
             }
         });
+
+
+        // .c-slick__gallery
+        // --------------------------------------------------------------
+        if ($(window).width() < 767) {
+            $('.c-slick__gallery').slick({
+                arrows: true,
+                infinite: true,
+                slidesPerRow: 1,
+                prevArrow: '<div class="c-slick__arrow c-slick__arrow--prev"></div>',
+                nextArrow: '<div class="c-slick__arrow c-slick__arrow--next"></div>',
+            });
+        }
 
 
         // .c-slick__slideset
@@ -423,17 +417,21 @@
         });
 
 
-        // .c-slick__hotels
+        // .c-slick__popular-excursions
         // --------------------------------------------------------------
-        if ($(window).width() < 767) {
-            $('.c-slick__gallery').slick({
-                arrows: true,
-                infinite: true,
-                slidesPerRow: 1,
-                prevArrow: '<div class="c-slick__arrow c-slick__arrow--prev"></div>',
-                nextArrow: '<div class="c-slick__arrow c-slick__arrow--next"></div>',
-            });
-        }
+        $('.c-slick__popular-excursions').slick({
+            infinite: true,
+            slidesPerRow: 6,
+            arrows: true,
+            prevArrow: '<div class="c-slick__arrow c-slick__arrow--prev"></div>',
+            nextArrow: '<div class="c-slick__arrow c-slick__arrow--next"></div>',
+            responsive: [
+                {
+                breakpoint: 1151,
+                settings: "unslick"
+                }
+            ]
+        });
 
 
     }); // end ready

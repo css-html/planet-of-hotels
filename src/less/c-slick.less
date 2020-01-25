@@ -111,18 +111,26 @@
 
             &--prev {
                 top: 0;
-                left: -@gap;
+                left: 0;
                 bottom: 0;
                 border-left: 2px solid;
                 border-bottom: 2px solid;
+
+                @media (min-width: 1366px) {
+                    left: -@gap;
+                }
             }
 
             &--next {
                 top: 0;
-                right: -@gap;
+                right: 0;
                 bottom: 0;
                 border-top: 2px solid;
                 border-right: 2px solid;
+
+                @media (min-width: 1366px) {
+                    right: -@gap;
+                }
             }
 
             &:hover {
@@ -168,17 +176,13 @@
 
         &__direction {
             margin: 0;
+        }
 
-            // @{r}__arrow {
+        &__popular-excursions {
 
-            //     &--prev {
-            //         left: 0;
-            //     }
-
-            //     &--next {
-            //         right: 0;
-            //     }
-            // }
+            @{r}__arrow {
+                top: -80px;
+            }
         }
 
         // modifier

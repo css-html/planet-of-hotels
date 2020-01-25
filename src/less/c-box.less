@@ -277,16 +277,47 @@
 
     // influence
     //-----------------------------------------------------------
-    .c-slick @{r} {
+    .c-slick {
 
-        @media (max-width: 1151px) {
-            width: 184px;
-        }
-
-        &__img {
+        @{r} {
 
             @media (max-width: 1151px) {
-                height: 184px;
+                width: 184px;
+            }
+
+            &__img {
+
+                @media (max-width: 1151px) {
+                    height: 184px;
+                }
+            }
+        }
+
+        &__slideset @{r}__img {
+
+            @media (min-width: 1152px) {
+                height: calc(~ '100vw / 6 - 10px * 5');
+            }
+        }
+
+        &__hotels @{r}__img {
+
+            @media (min-width: 1152px) {
+                height: calc(~'@{container} / 6 - 5px * 5');
+            }
+        }
+
+        &__latest-news @{r}__img {
+
+            @media (min-width: 1152px) {
+                height: calc(~'@{container} / 4 - 10px * 4');
+            }
+        }
+
+        &__popular-excursions @{r}__img {
+
+            @media (min-width: 1152px) {
+                height: 270px;
             }
         }
     }
