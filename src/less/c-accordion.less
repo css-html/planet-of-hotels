@@ -1,0 +1,96 @@
+/* .c-accordion
+---------------------------------------------------------------*/
+& {
+    @r: ~ '.c-accordion';
+
+    // base
+    //-----------------------------------------------------------
+    @{r} {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__column {
+            align-self: flex-start;
+            width: 100%;
+
+            @media (min-width: 768px) {
+                margin-right: 40px;
+                .mixin-grid(2, 40px);
+            }
+        }
+
+        &__item {
+            margin-top: -1px;
+            border-top: 1px solid #d0dbea;
+            border-bottom: 1px solid #d0dbea;
+        }
+
+        &__title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .3s;
+
+            @media (min-width: 768px) {
+                height: 70px;
+                font-size: 16px;
+            }
+
+            &:after {
+                width: 8px;
+                height: 8px;
+                content: '';
+                margin-left: @gap;
+                margin-right: 4px;
+                border-right: 2px solid;
+                border-bottom: 2px solid;
+                transform: rotate(45deg);
+                transition: transform .3s;
+
+                @media (min-width: 768px) {
+                    width: @gap;
+                    height: @gap;
+                }
+            }
+
+            &:hover {
+                color: #1ba0ff;
+            }
+        }
+
+        &__content {
+            display: none;
+            font-size: 12px;
+            padding-bottom: 20px;
+
+            @media (min-width: 768px) {
+                font-size: 14px;
+            }
+
+            a {
+                color: #1ba0ff;
+                text-decoration: underline;
+                transition: .3s;
+
+                &:hover {
+                    color: darken(#1ba0ff, 20%);
+                }
+            }
+        }
+
+        // modifier
+        //-------------------------------------------------------
+        &--active {
+
+            @{r}__title:after {
+                transform: rotate(-135deg);
+            }
+        }
+    }
+
+    // influence
+    //-----------------------------------------------------------
+}

@@ -238,6 +238,20 @@
             }
         }
 
+        &__text {
+            display: none;
+
+            @media (min-width: 1152px) {
+                font-size: 12px;
+                line-height: 1.8;
+                overflow: hidden;
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 7;
+                -webkit-box-orient: vertical;
+            }
+        }
+
         // modifier
         //-------------------------------------------------------
         &--fs-12 {

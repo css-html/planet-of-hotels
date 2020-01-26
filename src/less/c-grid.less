@@ -7,19 +7,28 @@
     //-----------------------------------------------------------
     @{r} {
         display: flex;
-        flex-wrap: wrap;
 
-        &__column {
-            width: 100%;
-            margin-top: 20px;
+        @media (max-width: 1151px) {
+            flex-direction: column;
+        }
 
-            &:first-child {
-                margin-top: 0;
+        &__left {
+
+            @media (max-width: 1151px) {
+                left: -100%;
+                position: absolute;
             }
 
-            @media (min-width: 768px) {
-                margin-top: 40px;
-                margin-right: 40px;
+            @media (min-width: 1152px) {
+                width: 280px;
+            }
+        }
+
+        &__right {
+
+            @media (min-width: 1152px) {
+                padding-left: 40px;
+                width: calc(~ '100% - 280px');
             }
         }
 

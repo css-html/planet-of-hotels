@@ -35,105 +35,110 @@
             }
         }
 
-        &__next,
-        &__prev {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            top: 0;
-            bottom: 0;
-            z-index: 1;
-            width: 20px;
-            height: 40px;
-            margin: auto;
-            font-size: 12px;
-            cursor: pointer;
-            position: absolute;
-            border-radius: 100%;
-            background-color: @white;
-            transition: .3s;
-
-            @media (min-width: 768px) {
-                width: 40px;
-                box-shadow: 0 0 4px rgba(0,0,0,.2);
-            }
-
-            &:hover {
-
-                @media (min-width: 1152px) {
-                    box-shadow: 0 0 4px rgba(0,0,0,.4);
-                }
-            }
+        &__wrap {
+            height: 100%;
+            position: relative;
         }
 
-        &__prev {
-            left: 0;
-            padding-right: 6px;
-            border-top-left-radius: 0;
-            border-top-right-radius: 100% 50%;
-            border-bottom-right-radius: 100% 50%;
-            border-bottom-left-radius: 0;
+        // &__next,
+        // &__prev {
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        //     top: 0;
+        //     bottom: 0;
+        //     z-index: 1;
+        //     width: 20px;
+        //     height: 40px;
+        //     margin: auto;
+        //     font-size: 12px;
+        //     cursor: pointer;
+        //     position: absolute;
+        //     border-radius: 100%;
+        //     background-color: @white;
+        //     transition: .3s;
 
-            @media (min-width: 768px) {
-                padding-right: 0;
-                border-radius: 100%;
-            }
-        }
+        //     @media (min-width: 768px) {
+        //         width: 40px;
+        //         box-shadow: 0 0 4px rgba(0,0,0,.2);
+        //     }
 
-        &__next {
-            right: 0;
-            padding-left: 6px;
-            border-top-left-radius: 100% 50%;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 100% 50%;
+        //     &:hover {
 
-            @media (min-width: 768px) {
-                padding-left: 0;
-                border-radius: 100%;
-            }
-        }
+        //         @media (min-width: 1152px) {
+        //             box-shadow: 0 0 4px rgba(0,0,0,.4);
+        //         }
+        //     }
+        // }
+
+        // &__prev {
+        //     left: 0;
+        //     padding-right: 6px;
+        //     border-top-left-radius: 0;
+        //     border-top-right-radius: 100% 50%;
+        //     border-bottom-right-radius: 100% 50%;
+        //     border-bottom-left-radius: 0;
+
+        //     @media (min-width: 768px) {
+        //         padding-right: 0;
+        //         border-radius: 100%;
+        //     }
+        // }
+
+        // &__next {
+        //     right: 0;
+        //     padding-left: 6px;
+        //     border-top-left-radius: 100% 50%;
+        //     border-top-right-radius: 0;
+        //     border-bottom-right-radius: 0;
+        //     border-bottom-left-radius: 100% 50%;
+
+        //     @media (min-width: 768px) {
+        //         padding-left: 0;
+        //         border-radius: 100%;
+        //     }
+        // }
 
         &__arrow {
+            display: flex;
+            align-items: center;
             z-index: 1;
-            width: @gap;
-            height: @gap;
-            margin: auto;
+            top: 10px;
+            bottom: 10px;
             cursor: pointer;
+            overflow: hidden;
             position: absolute;
-            transform: rotate(45deg);
-            transition: .3s;
-            display: none;
 
-            @media (min-width: 1366px) {
+            &:before {
+                content: '';
+                width: @gap;
+                height: @gap;
                 display: block;
+                transform: rotate(45deg);
+                transition: .3s;
             }
 
             &--prev {
-                top: 0;
-                left: 0;
-                bottom: 0;
-                border-left: 2px solid;
-                border-bottom: 2px solid;
+                left: -@gap;
 
-                @media (min-width: 1366px) {
-                    left: -@gap;
+                &:before {
+                    margin-left: 5px;
+                    border-left: 2px solid;
+                    border-bottom: 2px solid;
                 }
             }
 
             &--next {
-                top: 0;
-                right: 0;
-                bottom: 0;
-                border-top: 2px solid;
-                border-right: 2px solid;
+                right: -@gap;
 
-                @media (min-width: 1366px) {
-                    right: -@gap;
+                &:before {
+                    margin-right: 5px;
+                    border-top: 2px solid;
+                    border-right: 2px solid;
                 }
             }
 
-            &:hover {
+            &:hover:before {
                 border-color: @gray-dark;
             }
         }
@@ -141,36 +146,21 @@
         &__hotels {
 
             @{r}__arrow {
-                top: 35%;
-                bottom: auto;
+                height: calc(~'@{container} / 6 - 5px * 5');
             }
         }
 
         &__latest-news {
 
             @{r}__arrow {
-                top: 38%;
-                bottom: auto;
+                height: calc(~'@{container} / 4 - 10px * 4');
             }
         }
 
-        &__gallery {
+        &__popular-excursions {
 
             @{r}__arrow {
-
-                @media (max-width: 1151px) {
-                    display: block;
-                }
-
-                &--prev {
-                    left: 16px;
-                    border-color: @white;
-                }
-
-                &--next {
-                    right: 16px;
-                    border-color: @white;
-                }
+                height: 270px;
             }
         }
 
@@ -178,10 +168,90 @@
             margin: 0;
         }
 
-        &__popular-excursions {
+        &__gallery {
 
             @{r}__arrow {
-                top: -80px;
+
+                &--prev {
+                    left: 16px;
+
+                    &:before {
+                        border-color: @white;
+                    }
+                }
+
+                &--next {
+                    right: 16px;
+
+                    &:before {
+                        border-color: @white;
+                    }
+                }
+            }
+        }
+
+        &__card {
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+
+            * {
+                height: 100%;
+            }
+
+            .slick-slide {
+                position: relative;
+            }
+
+            img {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+            }
+
+            @{r}__arrow {
+                top: 0;
+
+                @media (max-width: 767px) {
+                    align-items: flex-end;
+                    padding-bottom: 10px;
+                }
+
+                &:before {
+                    border-color: @white;
+
+                    @media (max-width: 767px) {
+                        width: 8px;
+                        height: 8px;
+                    }
+                }
+
+                &--prev {
+
+                    @media (max-width: 767px) {
+                        left: 4px;
+                    }
+
+                    @media (min-width: 768px) {
+                        left: 16px;
+                    }
+                }
+
+                &--next {
+
+                    @media (max-width: 767px) {
+                        right: 4px;
+                    }
+
+                    @media (min-width: 768px) {
+                        right: 16px
+                    }
+                }
             }
         }
 

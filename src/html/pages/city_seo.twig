@@ -1,6 +1,6 @@
 {% extends '../layout.twig' %}
 
-{% block head_title %}Europe | Planet of Hotels{% endblock %}
+{% block head_title %}City SEO | Planet of Hotels{% endblock %}
 
 {% block body_class %}l-body{% endblock %}
 
@@ -46,12 +46,7 @@
                             <div class="c-tab__item c-tab__item--active">
                                 <div class="c-tab__title">
                                     <h1 class="c-tab__title--h1">
-                                        <span class="min-1152">
-                                            Европа
-                                        </span>
-                                        <span class="max-1151">
-                                            Отели Европы
-                                        </span>
+                                        Отели Лондона
                                     </h1>
                                     <div class="c-tab__title--sub min-1152">
                                         Введите свои даты и выбирайте из 272 551 отеля и других вариантов жилья!
@@ -243,8 +238,12 @@
                             Главная
                         </a>
                         <div class="c-crumb__separator"></div>
-                        <span class="c-crumb__link c-crumb__link--current">
+                        <a class="c-crumb__link" href="javascript:void(0)">
                             Европа
+                        </a>
+                        <div class="c-crumb__separator"></div>
+                        <span class="c-crumb__link c-crumb__link--current">
+                            Лондон
                         </span>
                     </div>
                 </div>
@@ -252,210 +251,45 @@
         </div>
     </div>
 
-    <main class="l-main">
+    <main class="l-main l-main--pt-40">
         <div class="l-container">
 
-            <!-- Выберите страну - start -->
-            <div class="l-row l-row--mt-40">
-                <h2 class="c-title c-title--left-max-1151">
-                    Выберите страну
-                </h2>
-            </div>
             <div class="l-row">
-                {% include '../partials/c-direction.twig' %}
-            </div>
-            <!-- Выберите страну - end -->
-
-            <!-- Популярные направления - start -->
-            <div class="l-row l-row--flex l-row--between l-row--align-end l-row--mt-80">
-                <h2 class="c-title c-title--left-max-1151">
-                    Популярные направления
-                </h2>
-                <a class="c-all__title" href="javascript:void(0)">
-                    Смотреть все
-                </a>
-            </div>
-            <div class="l-row max-1151">
-                <div class="c-line"></div>
-            </div>
-            <div class="l-row">
-                <div class="c-tab c-tab--100vw">
-                    <div class="c-tab__nav">
-                        <a class="c-tab__link c-tab__link--active" href="#c-tab__1-1" data-title="Горнолыжный"></a>
-                        <a class="c-tab__link" href="#c-tab__1-2" data-title="Пляжный"></a>
-                        <a class="c-tab__link" href="#c-tab__1-3" data-title="Семейный"></a>
-                        <a class="c-tab__link" href="#c-tab__1-4" data-title="Шопинг"></a>
-                        <a class="c-tab__link" href="#c-tab__1-5" data-title="Архитектура"></a>
-                        <a class="c-tab__link" href="#c-tab__1-6" data-title="Острова"></a>
+                <div class="c-grid">
+                    <div class="c-grid__left">
+                        {% include '../partials/c-filter.twig' %}
                     </div>
-                    <div class="c-tab__content">
-                        <div class="c-tab__item c-tab__item--active" id="c-tab__1-1">
-                            <div class="c-slick c-slick__slideset">
-                                {% include '../partials/popular_destinations.twig' %}
-                                {% include '../partials/popular_destinations.twig' %}
-                                {% include '../partials/popular_destinations.twig' %}
-                                {% include '../partials/popular_destinations.twig' %}
+                    <div class="c-grid__right">
+                        <div class="l-row max-1151">
+                            <div class="c-sort">
+                                <a class="c-sort__item" href="javascript:void(0)">
+                                    <svg class="icon icon--pin"><use xlink:href="images/_sprite.svg#icon--pin"></use></svg>
+                                    Карта
+                                </a>
+                                <a class="c-sort__item" href="#c-filter">
+                                    <svg class="icon icon--filter"><use xlink:href="images/_sprite.svg#icon--filter"></use></svg>
+                                    Фильтры
+                                </a>
+                                <a class="c-sort__item" href="javascript:void(0)">
+                                    <svg class="icon icon--sort"><use xlink:href="images/_sprite.svg#icon--sort"></use></svg>
+                                    Сортировать
+                                </a>
                             </div>
                         </div>
-                        <div class="c-tab__item" id="c-tab__1-2">
-                            Контент...
+                        <div class="l-row l-row--mt-20 l-row--min-1152-mt-0">
+                            {% include '../partials/c-card.twig' %}
+                            {% include '../partials/c-card.twig' %}
+                            {% include '../partials/c-card.twig' %}
+                            {% include '../partials/c-card.twig' %}
                         </div>
-                        <div class="c-tab__item" id="c-tab__1-3">
-                            Контент...
-                        </div>
-                        <div class="c-tab__item" id="c-tab__1-4">
-                            Контент...
-                        </div>
-                        <div class="c-tab__item" id="c-tab__1-5">
-                            Контент...
-                        </div>
-                        <div class="c-tab__item" id="c-tab__1-6">
-                            Контент...
+                        <div class="l-row l-row--mt-40">
+                            {% include '../partials/c-pagination.twig' %}
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Популярные направления - end -->
 
-            <!-- Популярные отели Европы - start -->
-            <div class="l-row l-row--flex l-row--between l-row--align-end l-row--mt-80">
-                <h2 class="c-title c-title--left-max-1151">
-                    Популярные отели Европы
-                </h2>
-                <a class="c-all__title" href="javascript:void(0)">
-                    Смотреть все
-                </a>
-            </div>
-            <div class="l-row max-1151">
-                <div class="c-line"></div>
-            </div>
-            <div class="l-row">
-                <div class="c-tab">
-                    <div class="c-tab__nav">
-                        <a class="c-tab__link c-tab__link--active" href="#c-tab__2-1" data-title="Нью-Йорк"></a>
-                        <a class="c-tab__link" href="#c-tab__2-2" data-title="Венеция"></a>
-                        <a class="c-tab__link" href="#c-tab__2-3" data-title="Рим"></a>
-                        <a class="c-tab__link" href="#c-tab__2-4" data-title="Милан"></a>
-                        <a class="c-tab__link" href="#c-tab__2-5" data-title="Флоренция"></a>
-                        <a class="c-tab__link" href="#c-tab__2-6" data-title="Пиза"></a>
-                        <a class="c-tab__link" href="#c-tab__2-7" data-title="Неаполь"></a>
-                        <a class="c-tab__link" href="#c-tab__2-8" data-title="Апулия"></a>
-                        <a class="c-tab__link" href="#c-tab__2-9" data-title="Болонья"></a>
-                    </div>
-                    <div class="c-tab__content">
-                        <div class="c-tab__item c-tab__item--active" id="c-tab__2-1">
-                            <div class="c-slick c-slick__hotels">
-                                {% include '../partials/popular_hotels.twig' %}
-                                {% include '../partials/popular_hotels.twig' %}
-                                {% include '../partials/popular_hotels.twig' %}
-                                {% include '../partials/popular_hotels.twig' %}
-                            </div>
-                        </div>
-                        <div class="c-tab__item" id="c-tab__2-2">
-                            Контент...
-                        </div>
-                        <div class="c-tab__item" id="c-tab__2-3">
-                            Контент...
-                        </div>
-                        <div class="c-tab__item" id="c-tab__2-4">
-                            Контент...
-                        </div>
-                        <div class="c-tab__item" id="c-tab__2-5">
-                            Контент...
-                        </div>
-                        <div class="c-tab__item" id="c-tab__2-6">
-                            Контент...
-                        </div>
-                        <div class="c-tab__item" id="c-tab__2-7">
-                            Контент...
-                        </div>
-                        <div class="c-tab__item" id="c-tab__2-8">
-                            Контент...
-                        </div>
-                        <div class="c-tab__item" id="c-tab__2-9">
-                            Контент...
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Популярные отели Европы - end -->
-
-            <!-- Популярные достопримечательности - start -->
-            <div class="l-row l-row--flex l-row--between l-row--align-end l-row--mt-80">
-                <h2 class="c-title c-title--left-max-1151">
-                    Популярные достопримечательности
-                </h2>
-                <a class="c-all__title" href="javascript:void(0)">
-                    Смотреть все
-                </a>
-            </div>
-            <div class="l-row max-1151">
-                <div class="c-line"></div>
-            </div>
-            <div class="l-row">
-                <div class="c-tab c-tab--100vw">
-                    <div class="c-tab__nav">
-                        <a class="c-tab__link c-tab__link--active" href="#c-tab__3-1" data-title="Италия"></a>
-                        <a class="c-tab__link" href="#c-tab__3-2" data-title="Испания"></a>
-                        <a class="c-tab__link" href="#c-tab__3-3" data-title="Португалия"></a>
-                        <a class="c-tab__link" href="#c-tab__3-4" data-title="Бельгия"></a>
-                        <a class="c-tab__link" href="#c-tab__3-5" data-title="Польша"></a>
-                        <a class="c-tab__link" href="#c-tab__3-6" data-title="Венгрия"></a>
-                        <a class="c-tab__link" href="#c-tab__3-7" data-title="Нидерланды"></a>
-                        <a class="c-tab__link" href="#c-tab__3-8" data-title="Франция"></a>
-                        <a class="c-tab__link" href="#c-tab__3-9" data-title="Хорватия"></a>
-                    </div>
-                    <div class="c-tab__content">
-                        <div class="c-tab__item c-tab__item--active" id="c-tab__3-1">
-                            <div class="c-slick c-slick__slideset">
-                                {% include '../partials/popular_attractions.twig' %}
-                                {% include '../partials/popular_attractions.twig' %}
-                                {% include '../partials/popular_attractions.twig' %}
-                                {% include '../partials/popular_attractions.twig' %}
-                            </div>
-                        </div>
-                        <div class="c-tab__item" id="c-tab__3-2">
-                            Контент...
-                        </div>
-                        <div class="c-tab__item" id="c-tab__3-3">
-                            Контент...
-                        </div>
-                        <div class="c-tab__item" id="c-tab__3-4">
-                            Контент...
-                        </div>
-                        <div class="c-tab__item" id="c-tab__3-5">
-                            Контент...
-                        </div>
-                        <div class="c-tab__item" id="c-tab__3-6">
-                            Контент...
-                        </div>
-                        <div class="c-tab__item" id="c-tab__3-7">
-                            Контент...
-                        </div>
-                        <div class="c-tab__item" id="c-tab__3-8">
-                            Контент...
-                        </div>
-                        <div class="c-tab__item" id="c-tab__3-9">
-                            Контент...
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="l-row min-1152">
-                <div class="c-all">
-                    <a class="c-all__link" href="javascript:void(0)">
-                        Смотреть все
-                    </a>
-                </div>
-            </div>
-            <!-- Популярные достопримечательности - end -->
-
-            <!-- Туристическая Европа - start -->
-            <div class="l-row l-row--mt-80">
-                <h2 class="c-title c-title--left-max-1151">
-                    Туристическая Европа
-                </h2>
-            </div>
+            <!-- Интересное про Лондон - start -->
             <div class="l-row">
                 <div class="c-gallery">
                     <div class="c-gallery__grid c-slick c-slick__gallery" id="c-gallery__grid">
@@ -500,12 +334,145 @@
                     </div>
                 </div>
             </div>
-            <!-- Туристическая Европа - end -->
+            <!-- Интересное про Лондон - end -->
 
-            <!-- Путеводитель по Европе - start -->
+            <!-- Часто задаваемые вопросы об отелях в Лондоне - start -->
             <div class="l-row l-row--flex l-row--between l-row--align-end l-row--mt-80">
                 <h2 class="c-title c-title--left-max-1151">
-                    Путеводитель по Европе
+                    Часто задаваемые вопросы об отелях в Лондоне
+                 </h2>
+            </div>
+            <div class="l-row">
+                <div class="c-accordion">
+                    <div class="c-accordion__column">
+                        <div class="c-accordion__item">
+                            <div class="c-accordion__title">
+                                Какие отели в Лондоне подходят для семьи?
+                            </div>
+                            <div class="c-accordion__content">
+                                Если вас интересуют отели в Лондоне с высокой оценкой за завтраки, рассмотрите
+                                <a href="javascript:void(0)" target="_blank">
+                                    Intercontinental London - The O2, The Montague On The Gardens, Apex London Wall Hotel.
+                                </a>
+                            </div>
+                        </div>
+                        <div class="c-accordion__item">
+                            <div class="c-accordion__title">
+                                Какие отели в Лондоне подходят для семьи?
+                            </div>
+                            <div class="c-accordion__content">
+                                Если вас интересуют отели в Лондоне с высокой оценкой за завтраки, рассмотрите
+                                <a href="javascript:void(0)" target="_blank">
+                                    Intercontinental London - The O2, The Montague On The Gardens, Apex London Wall Hotel.
+                                </a>
+                            </div>
+                        </div>
+                        <div class="c-accordion__item">
+                            <div class="c-accordion__title">
+                                Какие отели в Лондоне подходят для семьи?
+                            </div>
+                            <div class="c-accordion__content">
+                                Если вас интересуют отели в Лондоне с высокой оценкой за завтраки, рассмотрите
+                                <a href="javascript:void(0)" target="_blank">
+                                    Intercontinental London - The O2, The Montague On The Gardens, Apex London Wall Hotel.
+                                </a>
+                            </div>
+                        </div>
+                        <div class="c-accordion__item">
+                            <div class="c-accordion__title">
+                                Какие отели в Лондоне подходят для семьи?
+                            </div>
+                            <div class="c-accordion__content">
+                                Если вас интересуют отели в Лондоне с высокой оценкой за завтраки, рассмотрите
+                                <a href="javascript:void(0)" target="_blank">
+                                    Intercontinental London - The O2, The Montague On The Gardens, Apex London Wall Hotel.
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-accordion__column">
+                        <div class="c-accordion__item">
+                            <div class="c-accordion__title">
+                                Какие отели в Лондоне подходят для семьи?
+                            </div>
+                            <div class="c-accordion__content">
+                                Если вас интересуют отели в Лондоне с высокой оценкой за завтраки, рассмотрите
+                                <a href="javascript:void(0)" target="_blank">
+                                    Intercontinental London - The O2, The Montague On The Gardens, Apex London Wall Hotel.
+                                </a>
+                            </div>
+                        </div>
+                        <div class="c-accordion__item">
+                            <div class="c-accordion__title">
+                                Какие отели в Лондоне подходят для семьи?
+                            </div>
+                            <div class="c-accordion__content">
+                                Если вас интересуют отели в Лондоне с высокой оценкой за завтраки, рассмотрите
+                                <a href="javascript:void(0)" target="_blank">
+                                    Intercontinental London - The O2, The Montague On The Gardens, Apex London Wall Hotel.
+                                </a>
+                            </div>
+                        </div>
+                        <div class="c-accordion__item">
+                            <div class="c-accordion__title">
+                                Какие отели в Лондоне подходят для семьи?
+                            </div>
+                            <div class="c-accordion__content">
+                                Если вас интересуют отели в Лондоне с высокой оценкой за завтраки, рассмотрите
+                                <a href="javascript:void(0)" target="_blank">
+                                    Intercontinental London - The O2, The Montague On The Gardens, Apex London Wall Hotel.
+                                </a>
+                            </div>
+                        </div>
+                        <div class="c-accordion__item">
+                            <div class="c-accordion__title">
+                                Какие отели в Лондоне подходят для семьи?
+                            </div>
+                            <div class="c-accordion__content">
+                                Если вас интересуют отели в Лондоне с высокой оценкой за завтраки, рассмотрите
+                                <a href="javascript:void(0)" target="_blank">
+                                    Intercontinental London - The O2, The Montague On The Gardens, Apex London Wall Hotel.
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Часто задаваемые вопросы об отелях в Лондоне - end -->
+
+            <!-- Достопримечательности Лондона - start -->
+            <div class="l-row l-row--flex l-row--between l-row--align-end l-row--mt-80">
+                <h2 class="c-title c-title--left-max-1151">
+                    Достопримечательности Лондона
+                 </h2>
+                <a class="c-all__title" href="javascript:void(0)">
+                    Смотреть все
+                </a>
+            </div>
+            <div class="l-row max-1151">
+                <div class="c-line"></div>
+            </div>
+            <div class="l-row">
+                <div class="c-slick c-slick__popular-excursions">
+                    {% include '../partials/sights.twig' %}
+                    {% include '../partials/sights.twig' %}
+                    {% include '../partials/sights.twig' %}
+                    {% include '../partials/sights.twig' %}
+                </div>
+            </div>
+            <div class="l-row min-1152">
+                <div class="c-all">
+                    <a class="c-all__link" href="javascript:void(0)">
+                        Смотреть все
+                    </a>
+                </div>
+            </div>
+            <!-- Достопримечательности Лондона - end -->
+
+            <!-- Путеводитель по Лондону - start -->
+            <div class="l-row l-row--flex l-row--between l-row--align-end l-row--mt-80">
+                <h2 class="c-title c-title--left-max-1151">
+                    Путеводитель по Лондону
                 </h2>
                 <a class="c-all__title" href="javascript:void(0)">
                     Смотреть все
@@ -535,7 +502,7 @@
                     </a>
                 </div>
             </div>
-            <!-- Путеводитель по Европе - end -->
+            <!-- Путеводитель по Лондону - end -->
 
         </div>
     </main>

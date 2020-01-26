@@ -322,9 +322,43 @@
         });
 
 
+        // .c-accordion
+        // --------------------------------------------------------------
+        $body.on('click', '.c-accordion__title', function() {
+            $(this)
+                .closest('.c-accordion__item')
+                .toggleClass('c-accordion--active')
+                .find('.c-accordion__content')
+                .slideToggle('fast');
+        });
+
+
         // .c-gallery__grid
         // --------------------------------------------------------------
         $('#c-gallery__grid').lightGallery();
+
+
+        // .c-filter
+        // --------------------------------------------------------------
+        $body.on('click', '.c-filter__title', function() {
+            $(this).toggleClass('c-filter__title--active c-filter__title--open');
+        });
+
+        $body.on('click', 'a[href^="#c-filter"]', function(a) {
+            a.preventDefault();
+            var b = $(this).attr('href');
+            $(b).addClass('c-filter--active');
+            $('.l-body').addClass('l-body--overflow');
+        });
+
+        $body.on('click', '.c-filter__close', function() {
+            $(this).closest('.c-filter').removeClass('c-filter--active');
+            $('.l-body').removeClass('l-body--overflow');
+        });
+
+        $body.on('click', '.c-filter__header--back', function() {
+            $(this).closest('.c-filter').removeClass('c-filter--active');
+        });
 
 
         // .c-slick
@@ -393,8 +427,9 @@
             responsive: [
                 {
                 breakpoint: 1151,
-                arrows: false,
-                // settings: "unslick"
+                settings: {
+                        arrows: false,
+                    }
                 }
             ]
         });
@@ -431,6 +466,27 @@
                 settings: "unslick"
                 }
             ]
+        });
+
+
+        // .c-slick__card
+        // --------------------------------------------------------------
+        $body.on('init', '.c-slick__card', function (event, slick, currentSlide, nextSlide) {
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            $(this).closest('.c-slick__wrap').find('.c-card__quantity').text(i + ' / ' + slick.slideCount);
+
+        }), $('.c-slick__card').slick({
+            infinite: true,
+            slidesPerRow: 1,
+            arrows: true,
+            prevArrow: '<div class="c-slick__arrow c-slick__arrow--prev"></div>',
+            nextArrow: '<div class="c-slick__arrow c-slick__arrow--next"></div>',
+
+        }), $('.c-slick__arrow').click(function() {
+            $('.c-slick__card').on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+                var i = (currentSlide ? currentSlide : 0) + 1;
+                $(this).closest('.c-slick__wrap').find('.c-card__quantity').text(i + ' / ' + slick.slideCount);
+            });
         });
 
 
