@@ -62,15 +62,18 @@
         }
 
         &__title {
+            color: @black;
             font-size: 14px;
             font-weight: 600;
             line-height: 1.4;
-            // overflow: hidden;
-            // white-space: nowrap;
-            // text-overflow: ellipsis;
+            transition: .3s;
 
             @media (min-width: 768px) {
                 font-size: 18px;
+            }
+
+            &:hover {
+                color: @blue;
             }
         }
 
@@ -167,13 +170,20 @@
             display: inline-block;
             color: @black;
             font-size: 12px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
             transition: .3s;
 
             @media (min-width: 768px) {
                 font-size: 14px;
+            }
+
+            &--city,
+            &--country,
+            &--address,
+            &--district {
+
+                @media (max-width: 767px) {
+                    display: none;
+                }
             }
 
             .icon {
@@ -210,17 +220,17 @@
         }
 
         &__map {
-            color: @black;
-            cursor: pointer;
-            font-size: 12px;
-            font-weight: 600;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            transition: .3s;
+            display: none;
 
             @media (min-width: 768px) {
-                font-size: 14px;
+                display: inline-block;
+                color: @black;
+                cursor: pointer;
+                font-weight: 600;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                transition: .3s;
             }
 
             &:hover {
@@ -261,6 +271,7 @@
 
             &--single {
                 margin: 0;
+                pointer-events: none;
 
                 @media (min-width: 768px) {
                     color: @gray-dark;
@@ -354,7 +365,6 @@
             }
 
             &--button {
-                flex-grow: 1;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -405,6 +415,41 @@
         //-------------------------------------------------------
         &--wrap {
             flex-wrap: wrap;
+        }
+
+        &--flex-start {
+            justify-content: flex-start;
+        }
+
+        &--group {
+
+            @media (max-width: 767px) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            @{r}__row {
+
+                @media (max-width: 767px) {
+                    display: inline-flex;
+                    margin: 0;
+                }
+            }
+
+            @{r}__location {
+
+                @media (max-width: 767px) {
+                    order: -2;
+                }
+            }
+
+            @{r}__dot {
+
+                @media (max-width: 767px) {
+                    order: -1;
+                    margin: 0 5px;
+                }
+            }
         }
     }
 

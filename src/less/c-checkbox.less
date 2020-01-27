@@ -77,19 +77,22 @@
             }
         }
 
-        // &:hover {
+        &:hover {
 
-        //     @{r}__icon {
-        //         background-color: @purple;
-        //     }
-
-        //     @{r}__title {
-        //         color: @purple;
-        //     }
-        // }
+            @{r}__title {
+                color: @blue;
+            }
+        }
 
         // modifier
         //-------------------------------------------------------
+        &--no-check {
+
+            @{r}__icon {
+                display: none;
+            }
+        }
+
         &--booking {
             left: 0;
             top: 100%;

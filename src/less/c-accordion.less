@@ -9,6 +9,11 @@
         display: flex;
         flex-wrap: wrap;
 
+        @media (max-width: 767px) {
+            margin-left: -@gap;
+            margin-right: -@gap;
+        }
+
         &__column {
             align-self: flex-start;
             width: 100%;
@@ -23,6 +28,10 @@
             margin-top: -1px;
             border-top: 1px solid #d0dbea;
             border-bottom: 1px solid #d0dbea;
+
+            @media (max-width: 767px) {
+               padding: 0 @gap;
+            }
         }
 
         &__title {

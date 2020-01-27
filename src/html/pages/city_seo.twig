@@ -233,19 +233,25 @@
                     </div>
                 </div>
                 <div class="c-crumb min-1152">
-                    <div class="c-crumb--overflow">
-                        <a class="c-crumb__link" href="javascript:void(0)">
-                            Главная
-                        </a>
-                        <div class="c-crumb__separator"></div>
-                        <a class="c-crumb__link" href="javascript:void(0)">
-                            Европа
-                        </a>
-                        <div class="c-crumb__separator"></div>
-                        <span class="c-crumb__link c-crumb__link--current">
-                            Лондон
-                        </span>
-                    </div>
+                    <ol class="c-crumb">
+                        <li class="c-crumb__item">
+                            <a class="c-crumb__link" href="javascript:void(0)">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="c-crumb__separator"></li>
+                        <li class="c-crumb__item">
+                            <a class="c-crumb__link" href="javascript:void(0)">
+                                Европа
+                            </a>
+                        </li>
+                        <li class="c-crumb__separator"></li>
+                        <li class="c-crumb__item">
+                            <span class="c-crumb__link c-crumb__link--current">
+                                Лондон
+                            </span>
+                        </li>
+                    </ol>
                 </div>
             </div>
         </div>
@@ -261,18 +267,35 @@
                     </div>
                     <div class="c-grid__right">
                         <div class="l-row max-1151">
+                            <ol class="c-crumb">
+                                <li class="c-crumb__item">
+                                    <a class="c-crumb__link" href="javascript:void(0)">
+                                        Главная
+                                    </a>
+                                </li>
+                                <li class="c-crumb__separator"></li>
+                                <li class="c-crumb__item">
+                                    <a class="c-crumb__link" href="javascript:void(0)">
+                                        Европа
+                                    </a>
+                                </li>
+                                <li class="c-crumb__separator"></li>
+                                <li class="c-crumb__item">
+                                    <span class="c-crumb__link c-crumb__link--current">
+                                        Лондон
+                                    </span>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="l-row max-1151">
                             <div class="c-sort">
                                 <a class="c-sort__item" href="javascript:void(0)">
-                                    <svg class="icon icon--pin"><use xlink:href="images/_sprite.svg#icon--pin"></use></svg>
+                                    <svg class="icon icon--pin-empty"><use xlink:href="images/_sprite.svg#icon--pin-empty"></use></svg>
                                     Карта
                                 </a>
                                 <a class="c-sort__item" href="#c-filter">
                                     <svg class="icon icon--filter"><use xlink:href="images/_sprite.svg#icon--filter"></use></svg>
                                     Фильтры
-                                </a>
-                                <a class="c-sort__item" href="javascript:void(0)">
-                                    <svg class="icon icon--sort"><use xlink:href="images/_sprite.svg#icon--sort"></use></svg>
-                                    Сортировать
                                 </a>
                             </div>
                         </div>
@@ -303,7 +326,7 @@
                             <img src="images/gallery/3-small.jpg" alt="image">
                         </a>
                     </div>
-                    <div class="c-description c-description--gallery">
+                    <div class="c-description c-description--gallery" id="c-description__1">
                         <div class="c-description__text">
                             <p>
                                 Когда речь заходит о романтике, у многих в воображении вырисовывается Париж. Его улицы, которые пахнут жареными каштанами, изумительная архитектура и пышные сады приводят в восторг не только туристов, но и местных жителей. Ежегодно в Париж приезжает 45 миллионов человек, чтобы собственными глазами увидеть Монмартр, Нотр-Дам-де-Пари и скульптуру Венеры Милосской в Лувре. Некоторые отправляются сюда, чтобы вернуться домой в новом статусе жениха и невесты, ведь Эйфелева башня — одна из самых популярных локаций в мире, где отвечают “да” на разных языках мира.
@@ -321,7 +344,7 @@
                                 Когда речь заходит о романтике, у многих в воображении вырисовывается Париж. Его улицы, которые пахнут жареными каштанами, изумительная архитектура и пышные сады приводят в восторг не только туристов, но и местных жителей. Ежегодно в Париж приезжает 45 миллионов человек, чтобы собственными глазами увидеть Монмартр, Нотр-Дам-де-Пари и скульптуру Венеры Милосской в Лувре. Некоторые отправляются сюда, чтобы вернуться домой в новом статусе жениха и невесты, ведь Эйфелева башня — одна из самых популярных локаций в мире, где отвечают “да” на разных языках мира.
                             </p>
                         </div>
-                        <div class="c-description__more">
+                        <a class="c-description__more" href="#c-description__1">
                             <div class="c-description__button">
                                 <span class="c-description__button--read">
                                     Читать все
@@ -330,7 +353,7 @@
                                     Свернуть
                                 </span>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
