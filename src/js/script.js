@@ -151,7 +151,7 @@
 
         // .c-booking__column
         // --------------------------------------------------------------
-        $body.on('click', '.c-booking__column:not(.c-booking__column--submit)', function() {
+        $body.on('click', '.c-booking__column:not(.c-booking__column--submit):not(.c-booking__column--add)', function() {
             $('.l-body').addClass('l-body--overflow');
 
             $(this)
@@ -159,7 +159,7 @@
                 .siblings()
                 .removeClass('c-booking--open');
 
-        }), $body.on('click', '.c-booking__panel--close', function(e) {
+        }), $body.on('click', '.c-booking__panel--close, .c-booking__change', function(e) {
             e.stopPropagation();
             $('.l-body').removeClass('l-body--overflow');
             $('.c-booking__column').removeClass('c-booking--open');
@@ -183,6 +183,10 @@
                 .find('.c-booking__input input')
                 .val($.trim(bookingLocation));
 
+            $(this)
+                .closest('.c-booking__column')
+                .addClass('c-booking__column--has-value');
+
         }), $(window).on('click', function() {
             $('.c-booking__column').removeClass('c-booking--active');
         });
@@ -192,8 +196,8 @@
         // --------------------------------------------------------------
         $body.on('click', '.c-booking__input--clear', function() {
             $(this).closest('.c-booking__input').find('input').val('');
-
         });
+
 
         // .c-booking__count
         // ------------------------------------------------------------
@@ -308,6 +312,50 @@
             });
 
             $('.c-booking__dropdown--dynamic:last-child').remove();
+        });
+
+
+        $body.on('click', '.c-booking__count--minus[href="#c-booking__count--default"]', function(a) {
+            a.preventDefault();
+            var bookingCountTarget = $(this).attr('href');
+
+            $(this)
+                .siblings('.c-booking__count--value')
+                .html(function(i, count) {
+                if (count > 0) {
+                    return +count-1
+                }
+            });
+        });
+
+
+        // .c-booking--difficult
+        // --------------------------------------------------------------
+        $body.on('click', '.c-booking--difficult input', function() {
+            $(this).closest('.c-booking__column').addClass('c-booking__column--has-value');
+
+        }), $('.c-booking--difficult input').each(function () {
+            if ($(this).val()) {
+                $(this).closest('.c-booking__column').addClass('c-booking__column--has-value');
+            }
+
+        }), $('.c-booking--difficult input').blur(function () {
+            var val = $(this).val();
+            if (val != '') {
+                $(this).closest('.c-booking__column').addClass('c-booking__column--has-value');
+            } else {
+                $(this).closest('.c-booking__column').removeClass('c-booking__column--has-value');
+            }
+        });
+
+
+        // .c-booking--complex
+        // --------------------------------------------------------------
+        $body.on('click', '[data-form="c-booking--complex"]', function() {
+            $('.c-booking--difficult').addClass('c-booking--complex');
+
+        }), $body.on('click', '[data-form="c-booking--difficult"]', function() {
+            $('.c-booking--difficult').removeClass('c-booking--complex')
         });
 
 
@@ -457,6 +505,60 @@
         $('.c-slick__popular-excursions').slick({
             infinite: true,
             slidesPerRow: 6,
+            arrows: true,
+            prevArrow: '<div class="c-slick__arrow c-slick__arrow--prev"></div>',
+            nextArrow: '<div class="c-slick__arrow c-slick__arrow--next"></div>',
+            responsive: [
+                {
+                breakpoint: 1151,
+                settings: "unslick"
+                }
+            ]
+        });
+
+
+        // .c-slick__avia
+        // --------------------------------------------------------------
+        $('.c-slick__avia').slick({
+            rows: 2,
+            infinite: true,
+            slidesPerRow: 7,
+            arrows: true,
+            prevArrow: '<div class="c-slick__arrow c-slick__arrow--prev"></div>',
+            nextArrow: '<div class="c-slick__arrow c-slick__arrow--next"></div>',
+            responsive: [
+                {
+                breakpoint: 1151,
+                settings: "unslick"
+                }
+            ]
+        });
+
+
+        // .c-slick__route
+        // --------------------------------------------------------------
+        $('.c-slick__route').slick({
+            rows: 2,
+            infinite: true,
+            slidesPerRow: 6,
+            arrows: true,
+            prevArrow: '<div class="c-slick__arrow c-slick__arrow--prev"></div>',
+            nextArrow: '<div class="c-slick__arrow c-slick__arrow--next"></div>',
+            responsive: [
+                {
+                breakpoint: 1151,
+                settings: "unslick"
+                }
+            ]
+        });
+
+
+        // .c-slick__popular-cities
+        // --------------------------------------------------------------
+        $('.c-slick__popular-cities').slick({
+            rows: 2,
+            infinite: true,
+            slidesPerRow: 4,
             arrows: true,
             prevArrow: '<div class="c-slick__arrow c-slick__arrow--prev"></div>',
             nextArrow: '<div class="c-slick__arrow c-slick__arrow--next"></div>',

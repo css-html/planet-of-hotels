@@ -1,0 +1,113 @@
+/* .c-route
+---------------------------------------------------------------*/
+& {
+    @r: ~ '.c-route';
+
+    // base
+    //-----------------------------------------------------------
+    @{r} {
+
+        &__item {
+
+            @media (max-width: 1151px) {
+                padding: 10px 5px;
+
+                &:first-child {
+                    padding-left: 10px;
+                }
+
+                &:last-child {
+                    padding-right: 10px;
+                }
+            }
+
+            @media (min-width: 1152px) {
+                padding: 10px;
+                vertical-align: top;
+            }
+        }
+
+        &__content {
+            display: block;
+            color: @black;
+            padding: 10px;
+            background-color: @white;
+            box-shadow: 0 0 10px 0 #d0dbea;
+            transition: .3s;
+
+            @media (min-width: 1152px) {
+                padding: 20px;
+
+                &:hover {
+                    box-shadow: 0 0 10px 0 darken(#d0dbea, 10%);
+                }
+            }
+        }
+
+        &__title {
+            font-size: 16px;
+            font-weight: 600;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            @media (min-width: 1152px) {
+                font-size: 18px;
+            }
+        }
+
+        &__direction {
+            color: @blue;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 6px;
+        }
+
+        &__date {
+            font-size: 14px;
+
+            @media (min-width: 1152px) {
+                font-size: 16px;
+            }
+        }
+
+        &__price {
+            display: inline-flex;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 6px;
+
+            @media (min-width: 1152px) {
+                font-size: 14px;
+            }
+
+            b {
+                margin: 0 4px;
+                font-weight: 900;
+            }
+
+            &:after {
+                width: 6px;
+                height: 6px;
+                content: '';
+                margin-top: -2px;
+                margin-left: 10px;
+                border-top: 2px solid #d0dbea;
+                border-right: 2px solid #d0dbea;
+                transform: rotate(45deg);
+
+                @media (min-width: 1152px) {
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+        }
+
+        // modifier
+        //-------------------------------------------------------
+    }
+
+    // influence
+    //-----------------------------------------------------------
+}

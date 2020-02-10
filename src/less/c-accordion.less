@@ -18,7 +18,7 @@
             align-self: flex-start;
             width: 100%;
 
-            @media (min-width: 768px) {
+            @media (min-width: 1152px) {
                 margin-right: 40px;
                 .mixin-grid(2, 40px);
             }
@@ -43,7 +43,7 @@
             cursor: pointer;
             transition: .3s;
 
-            @media (min-width: 768px) {
+            @media (min-width: 1152px) {
                 height: 70px;
                 font-size: 16px;
             }
@@ -59,7 +59,7 @@
                 transform: rotate(45deg);
                 transition: transform .3s;
 
-                @media (min-width: 768px) {
+                @media (min-width: 1152px) {
                     width: @gap;
                     height: @gap;
                 }
@@ -75,7 +75,7 @@
             font-size: 12px;
             padding-bottom: 20px;
 
-            @media (min-width: 768px) {
+            @media (min-width: 1152px) {
                 font-size: 14px;
             }
 
@@ -96,6 +96,76 @@
 
             @{r}__title:after {
                 transform: rotate(-135deg);
+            }
+        }
+
+        &--faq,
+        &--open {
+
+            @{r}__title {
+                font-size: 14px;
+
+                @media (min-width: 768px) {
+                    font-size: 18px;
+                }
+
+                @media (min-width: 1152px) {
+                    font-size: 22px;
+                }
+            }
+
+            @{r}__content {
+                color: #8593a2;
+                font-size: 12px;
+                line-height: 1.75;
+
+                @media (min-width: 768px) {
+                    font-size: 14px;
+                }
+
+                @media (min-width: 1152px) {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &--open {
+
+            @media (min-width: 1152px) {
+                margin-top: 40px;
+            }
+
+            @{r}__item {
+
+                @media (min-width: 1152px) {
+                    margin-top: 0;
+                    border-top: 0;
+                    border-bottom: 0;
+                }
+            }
+
+            @{r}__title {
+
+                @media (min-width: 1152px) {
+                    pointer-events: none;
+                }
+
+                &:after {
+
+                    @media (min-width: 1152px) {
+                        display: none;
+                    }
+                }
+            }
+
+            @{r}__content {
+
+                @media (min-width: 1152px) {
+                    display: block;
+                    color: #8593a2;
+                    line-height: 2;
+                    font-size: 14px;
+                }
             }
         }
     }

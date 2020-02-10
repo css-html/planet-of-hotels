@@ -20,7 +20,7 @@
         &__wrap {
             display: flex;
             align-items: center;
-            z-index: 1;
+            z-index: 2;
             position: relative;
 
             @media (min-width: 1152px) {
@@ -78,6 +78,10 @@
                 &:last-child {
                     margin-bottom: 0;
                 }
+            }
+
+            &--max-w-1080 {
+                max-width: 1080px;
             }
         }
 

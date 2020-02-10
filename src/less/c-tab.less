@@ -20,6 +20,16 @@
                 overflow-x: hidden;
                 white-space: normal;
             }
+
+            &--radio {
+                display: flex;
+                justify-content: flex-start;
+                margin-bottom: 16px;
+
+                @media (min-width: 1152px) {
+
+                }
+            }
         }
 
         &__link {
@@ -85,10 +95,6 @@
         &__content {
             padding-top: 10px;
 
-            // @media (min-width: 768px) {
-            //     padding-top: 20px;
-            // }
-
             @media (min-width: 1152px) {
                 padding-top: 40px;
             }
@@ -124,10 +130,11 @@
             &--h1 {
                 color: @white;
                 font-size: 22px;
+                font-weight: 600;
                 line-height: 1.2;
 
                 @media (min-width: 1152px) {
-                    font-size: 44px;
+                    font-size: 48px;
                     font-weight: 900;
                 }
             }
@@ -141,6 +148,71 @@
                 @media (min-width: 768px) {
                     font-size: 18px;
                 }
+            }
+        }
+
+        &__label {
+            display: flex;
+            align-items: center;
+            color: @white;
+            font-size: 12px;
+            cursor: pointer;
+            margin-right: @gap;
+            white-space: nowrap;
+
+            @media (min-width: 1152px) {
+                font-size: 14px;
+                margin-right: @gap * 4;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            input {
+                display: none;
+            }
+
+            &--radio {
+                display: block;
+                top: -1px;
+                width: 14px;
+                height: 14px;
+                margin-right: 6px;
+                position: relative;
+                border-radius: 100%;
+                border: 1px solid @white;
+
+                @media (min-width: 1152px) {
+                    width: 16px;
+                    height: 16px;
+                }
+
+                &:before {
+                    top: 4px;
+                    left: 4px;
+                    right: 4px;
+                    bottom: 4px;
+                    content: '';
+                    position: absolute;
+                    border-radius: 100%;
+                    background-color: @white;
+                    opacity: 0;
+                    transform: scale(0);
+                    transition: .3s;
+                }
+            }
+
+            :checked ~ @{r}__label--radio:before {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            &--absolute {
+                left: 0;
+                top: 100%;
+                margin-top: @gap * 2;
+                position: absolute;
             }
         }
 
@@ -170,7 +242,7 @@
                 position: relative;
             }
 
-            @{r}__nav {
+            @{r}__nav:not(@{r}__nav--radio) {
                 display: flex;
                 position: absolute;
 
@@ -200,6 +272,10 @@
                     font-size: 12px;
                     padding: 0 @gap;
                     margin-right: 0;
+                }
+
+                @media (max-width: 767px) {
+                    font-size: 10px;
                 }
 
                 @media (min-width: 1152px) {
@@ -243,9 +319,12 @@
                         font-size: 14px;
                         min-width: 14px;
                         margin-right: 10px;
+                        margin-bottom: 2px;
 
-                        &--ticket {
-                            margin-bottom: 2px;
+                        @media (max-width: 767px) {
+                            font-size: 10px;
+                            min-width: 12px;
+                            margin-right: 6px;
                         }
                     }
                 }
@@ -253,6 +332,17 @@
 
             @{r}__content {
                 padding-top: 0;
+            }
+        }
+
+        &--difficult {
+
+            @{r}__title {
+                margin-bottom: 12px;
+
+                @media (min-width: 1152px) {
+                    margin-bottom: 40px;
+                }
             }
         }
     }

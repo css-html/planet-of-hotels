@@ -18,15 +18,16 @@
 
 // mixin-container
 //-----------------------------------------------------------
-// .mixin-container() {
-//     width: 100%;
-//     margin: 0 auto;
-//     padding-left: @gap;
-//     padding-right: @gap;
+.mixin-container() {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: @gap;
+    padding-right: @gap;
+    max-width: calc(~'@{container} + @{gap} * 2');
 
-//     @media (min-width: 768px) {
-//         padding-left: @gap;
-//         padding-right: @gap;
-//         max-width: calc(~'@{container} + @{gap} * 2');
-//     }
-// }
+    @media (min-width: 1152px) {
+        padding-left: @gap * 2;
+        padding-right: @gap * 2;
+        max-width: calc(~'@{container} + @{gap} * 4');
+    }
+}
