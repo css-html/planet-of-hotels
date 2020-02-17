@@ -10,7 +10,7 @@
 
     <div class="c-banner">
         <picture class="c-banner__picture">
-            <img src="images/banners/1.jpg" alt="image">
+            <img src="images/banners/2.jpg" alt="image">
         </picture>
         <div class="l-container">
             <div class="c-banner__wrap">
@@ -30,7 +30,7 @@
                                 <span class="c-tab__label--radio"></span>
                                 Туда и обратно
                             </label>
-                            <label class="c-tab__label" data-form="c-booking--difficult">
+                            <label class="c-tab__label" data-form="c-booking--one-way">
                                 <input type="radio" name="searchForm">
                                 <span class="c-tab__label--radio"></span>
                                 В одну сторону
@@ -42,13 +42,13 @@
                             </label>
                         </div>
                         <div class="c-tab__nav max-1151">
-                            <a class="c-tab__link c-tab__link--active" href="javascript:void(0)" data-title="Отели">
+                            <a class="c-tab__link" href="javascript:void(0)" data-title="Отели">
                                 <div class="c-tab__link--inner">
                                     <svg class="icon icon--bed-1"><use xlink:href="images/_sprite.svg#icon--bed-1"></use></svg>
                                     Отели
                                 </div>
                             </a>
-                            <a class="c-tab__link" href="javascript:void(0)" data-title="Авиабилеты">
+                            <a class="c-tab__link c-tab__link--active" href="javascript:void(0)" data-title="Авиабилеты">
                                 <div class="c-tab__link--inner">
                                     <svg class="icon icon--plane"><use xlink:href="images/_sprite.svg#icon--plane"></use></svg>
                                     Авиабилеты
@@ -69,23 +69,20 @@
                         </div>
                         <div class="c-tab__content">
                             <div class="c-tab__item c-tab__item--active">
-                                <form class="c-booking c-booking--difficult _c-booking--complex c-form">
+                                <form class="c-booking c-booking--difficult c-form">
                                     <div class="c-booking__column c-booking__column--from" data-title="Откуда">
-                                        <div class="c-booking__panel">
-                                            <div class="c-booking__panel--title">
-                                                Откуда
-                                            </div>
-                                            <div class="c-booking__panel--close"></div>
-                                        </div>
                                         <div class="c-booking__input">
-                                            <input type="text" placeholder="Откуда" value="" autocomplete="off" required id="js-bookingFrom" />
-                                            <div class="c-booking__input--clear"></div>
+                                            <input type="text" placeholder="Откуда" autocomplete="off" required id="js-bookingFrom" />
+                                            <span class="c-booking__input--clear">
+                                                Очистить
+                                            </span>
+                                            <span class="c-booking__input--close"></span>
                                         </div>
                                         <div class="c-booking__dropdown">
                                             <div class="c-booking__dropdown--item">
                                                 <div class="c-checkbox">
                                                     <label class="c-checkbox__label">
-                                                        <input type="checkbox" name="checkbox" checked>
+                                                        <input type="checkbox" name="checkbox">
                                                         <span class="c-checkbox__icon"></span>
                                                         <span class="c-checkbox__title">
                                                             и аэропорты рядом
@@ -99,20 +96,10 @@
                                                 </div>
                                                 <div class="c-booking__dropdown--info">
                                                     <div class="c-booking__dropdown--location">
-                                                        Италия
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="c-booking__dropdown--item">
-                                                <div class="c-booking__dropdown--icon">
-                                                    <svg class="icon icon--pin"><use xlink:href="images/_sprite.svg#icon--pin"></use></svg>
-                                                </div>
-                                                <div class="c-booking__dropdown--info">
-                                                    <div class="c-booking__dropdown--location">
-                                                        Итальянская Ривьера
+                                                        Милан - Все аэропорты
                                                     </div>
                                                     <div class="c-booking__dropdown--region">
-                                                        Регион - Италия
+                                                        Италия
                                                     </div>
                                                 </div>
                                             </div>
@@ -122,36 +109,62 @@
                                                 </div>
                                                 <div class="c-booking__dropdown--info">
                                                     <div class="c-booking__dropdown--location">
-                                                        Аэропорт Рим
+                                                        Милан (MXP)
                                                     </div>
                                                     <div class="c-booking__dropdown--region">
-                                                        Город - Лацио, Италия
+                                                        Италия
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="c-booking__dropdown--item">
                                                 <div class="c-booking__dropdown--icon">
-                                                    <svg class="icon icon--bed-2"><use xlink:href="images/_sprite.svg#icon--bed-2"></use></svg>
+                                                    <svg class="icon icon--plane"><use xlink:href="images/_sprite.svg#icon--plane"></use></svg>
                                                 </div>
                                                 <div class="c-booking__dropdown--info">
                                                     <div class="c-booking__dropdown--location">
-                                                        Intercontinental Rome
+                                                        Милан (MXP)
                                                     </div>
                                                     <div class="c-booking__dropdown--region">
-                                                        Регион - Италия
+                                                        Италия
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="c-booking__dropdown--item">
                                                 <div class="c-booking__dropdown--icon">
-                                                    <svg class="icon icon--monastery"><use xlink:href="images/_sprite.svg#icon--monastery"></use></svg>
+                                                    <svg class="icon icon--plane"><use xlink:href="images/_sprite.svg#icon--plane"></use></svg>
                                                 </div>
                                                 <div class="c-booking__dropdown--info">
                                                     <div class="c-booking__dropdown--location">
-                                                        Колизей
+                                                        Милан (MXP)
                                                     </div>
                                                     <div class="c-booking__dropdown--region">
-                                                        Регион - Италия
+                                                        Италия
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="c-booking__dropdown--item">
+                                                <div class="c-booking__dropdown--icon">
+                                                    <svg class="icon icon--plane"><use xlink:href="images/_sprite.svg#icon--plane"></use></svg>
+                                                </div>
+                                                <div class="c-booking__dropdown--info">
+                                                    <div class="c-booking__dropdown--location">
+                                                        Милан (MXP)
+                                                    </div>
+                                                    <div class="c-booking__dropdown--region">
+                                                        Италия
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="c-booking__dropdown--item">
+                                                <div class="c-booking__dropdown--icon">
+                                                    <svg class="icon icon--plane"><use xlink:href="images/_sprite.svg#icon--plane"></use></svg>
+                                                </div>
+                                                <div class="c-booking__dropdown--info">
+                                                    <div class="c-booking__dropdown--location">
+                                                        Милан (MXP)
+                                                    </div>
+                                                    <div class="c-booking__dropdown--region">
+                                                        Италия
                                                     </div>
                                                 </div>
                                             </div>
@@ -174,37 +187,24 @@
                                         <div class="c-booking__change" id="js-bookingChange">
                                             <svg class="icon icon--change"><use xlink:href="images/_sprite.svg#icon--change"></use></svg>
                                         </div>
-                                        <div class="c-booking__panel">
-                                            <div class="c-booking__panel--title">
-                                                Куда
-                                            </div>
-                                            <div class="c-booking__panel--close"></div>
-                                        </div>
                                         <div class="c-booking__input">
-                                            <input type="text" placeholder="Куда" value="" autocomplete="off" required id="js-bookingWhere" />
-                                            <div class="c-booking__input--clear"></div>
+                                            <input type="text" placeholder="Куда" autocomplete="off" required id="js-bookingWhere" />
+                                            <span class="c-booking__input--clear">
+                                                Очистить
+                                            </span>
+                                            <span class="c-booking__input--close"></span>
                                         </div>
                                         <div class="c-booking__dropdown">
                                             <div class="c-booking__dropdown--item">
                                                 <div class="c-booking__dropdown--icon">
-                                                    <svg class="icon icon--pin"><use xlink:href="images/_sprite.svg#icon--pin"></use></svg>
+                                                    <svg class="icon icon--plane"><use xlink:href="images/_sprite.svg#icon--plane"></use></svg>
                                                 </div>
                                                 <div class="c-booking__dropdown--info">
                                                     <div class="c-booking__dropdown--location">
-                                                        Италия
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="c-booking__dropdown--item">
-                                                <div class="c-booking__dropdown--icon">
-                                                    <svg class="icon icon--pin"><use xlink:href="images/_sprite.svg#icon--pin"></use></svg>
-                                                </div>
-                                                <div class="c-booking__dropdown--info">
-                                                    <div class="c-booking__dropdown--location">
-                                                        Итальянская Ривьера
+                                                        Милан (MXP)
                                                     </div>
                                                     <div class="c-booking__dropdown--region">
-                                                        Регион - Италия
+                                                        Италия
                                                     </div>
                                                 </div>
                                             </div>
@@ -214,65 +214,73 @@
                                                 </div>
                                                 <div class="c-booking__dropdown--info">
                                                     <div class="c-booking__dropdown--location">
-                                                        Аэропорт Рим
+                                                        Милан (MXP)
                                                     </div>
                                                     <div class="c-booking__dropdown--region">
-                                                        Город - Лацио, Италия
+                                                        Италия
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="c-booking__dropdown--item">
                                                 <div class="c-booking__dropdown--icon">
-                                                    <svg class="icon icon--bed-2"><use xlink:href="images/_sprite.svg#icon--bed-2"></use></svg>
+                                                    <svg class="icon icon--plane"><use xlink:href="images/_sprite.svg#icon--plane"></use></svg>
                                                 </div>
                                                 <div class="c-booking__dropdown--info">
                                                     <div class="c-booking__dropdown--location">
-                                                        Intercontinental Rome
+                                                        Милан (MXP)
                                                     </div>
                                                     <div class="c-booking__dropdown--region">
-                                                        Регион - Италия
+                                                        Италия
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="c-booking__dropdown--item">
                                                 <div class="c-booking__dropdown--icon">
-                                                    <svg class="icon icon--monastery"><use xlink:href="images/_sprite.svg#icon--monastery"></use></svg>
+                                                    <svg class="icon icon--plane"><use xlink:href="images/_sprite.svg#icon--plane"></use></svg>
                                                 </div>
                                                 <div class="c-booking__dropdown--info">
                                                     <div class="c-booking__dropdown--location">
-                                                        Колизей
+                                                        Милан (MXP)
                                                     </div>
                                                     <div class="c-booking__dropdown--region">
-                                                        Регион - Италия
+                                                        Италия
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="c-booking__dropdown--item">
+                                                <div class="c-booking__dropdown--icon">
+                                                    <svg class="icon icon--plane"><use xlink:href="images/_sprite.svg#icon--plane"></use></svg>
+                                                </div>
+                                                <div class="c-booking__dropdown--info">
+                                                    <div class="c-booking__dropdown--location">
+                                                        Милан (MXP)
+                                                    </div>
+                                                    <div class="c-booking__dropdown--region">
+                                                        Италия
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="c-booking__column c-booking__column--when" data-title="Когда">
-                                        <div class="c-booking__panel">
-                                            <div class="c-booking__panel--title">
-                                                Когда
-                                            </div>
-                                            <div class="c-booking__panel--close"></div>
-                                        </div>
                                         <div class="c-booking__input">
                                             <input type="text" placeholder="Когда" autocomplete="off" required />
                                             <svg class="icon icon--calendar"><use xlink:href="images/_sprite.svg#icon--calendar"></use></svg>
+                                            <span class="c-booking__input--clear">
+                                                Очистить
+                                            </span>
+                                            <span class="c-booking__input--close"></span>
                                         </div>
                                     </div>
 
 
                                     <div class="c-booking__column c-booking__column--clone c-booking__column--from" data-title="Откуда">
-                                        <div class="c-booking__panel">
-                                            <div class="c-booking__panel--title">
-                                                Откуда
-                                            </div>
-                                            <div class="c-booking__panel--close"></div>
-                                        </div>
                                         <div class="c-booking__input">
-                                            <input type="text" placeholder="Откуда" value="" autocomplete="off" required id="js-bookingFrom" />
-                                            <div class="c-booking__input--clear"></div>
+                                            <input type="text" placeholder="Откуда" autocomplete="off" required id="js-bookingFrom" />
+                                            <span class="c-booking__input--clear">
+                                                Очистить
+                                            </span>
+                                            <span class="c-booking__input--close"></span>
                                         </div>
                                         <div class="c-booking__dropdown">
                                             <div class="c-booking__dropdown--item">
@@ -343,15 +351,12 @@
                                         <div class="c-booking__change" id="js-bookingChange">
                                             <svg class="icon icon--change"><use xlink:href="images/_sprite.svg#icon--change"></use></svg>
                                         </div>
-                                        <div class="c-booking__panel">
-                                            <div class="c-booking__panel--title">
-                                                Куда
-                                            </div>
-                                            <div class="c-booking__panel--close"></div>
-                                        </div>
                                         <div class="c-booking__input">
-                                            <input type="text" placeholder="Куда" value="" autocomplete="off" required id="js-bookingWhere" />
-                                            <div class="c-booking__input--clear"></div>
+                                            <input type="text" placeholder="Куда" autocomplete="off" required id="js-bookingWhere" />
+                                            <span class="c-booking__input--clear">
+                                                Очистить
+                                            </span>
+                                            <span class="c-booking__input--close"></span>
                                         </div>
                                         <div class="c-booking__dropdown">
                                             <div class="c-booking__dropdown--item">
@@ -419,41 +424,36 @@
                                         </div>
                                     </div>
                                     <div class="c-booking__column c-booking__column--clone c-booking__column--when" data-title="Когда">
-                                        <div class="c-booking__panel">
-                                            <div class="c-booking__panel--title">
-                                                Когда
-                                            </div>
-                                            <div class="c-booking__panel--close"></div>
-                                        </div>
                                         <div class="c-booking__input">
                                             <input type="text" placeholder="Когда" autocomplete="off" required />
                                             <svg class="icon icon--calendar"><use xlink:href="images/_sprite.svg#icon--calendar"></use></svg>
+                                            <span class="c-booking__input--clear">
+                                                Очистить
+                                            </span>
+                                            <span class="c-booking__input--close"></span>
                                         </div>
+                                        <div class="c-booking__remove"></div>
                                     </div>
 
 
                                     <div class="c-booking__column c-booking__column--visit" data-title="Туда">
-                                        <div class="c-booking__panel">
-                                            <div class="c-booking__panel--title">
-                                                Туда
-                                            </div>
-                                            <div class="c-booking__panel--close"></div>
-                                        </div>
                                         <div class="c-booking__input">
                                             <input type="text" placeholder="Туда" autocomplete="off" required />
                                             <svg class="icon icon--calendar"><use xlink:href="images/_sprite.svg#icon--calendar"></use></svg>
+                                            <span class="c-booking__input--clear">
+                                                Очистить
+                                            </span>
+                                            <span class="c-booking__input--close"></span>
                                         </div>
                                     </div>
                                     <div class="c-booking__column c-booking__column--leaving" data-title="Обратно">
-                                        <div class="c-booking__panel">
-                                            <div class="c-booking__panel--title">
-                                                Обратно
-                                            </div>
-                                            <div class="c-booking__panel--close"></div>
-                                        </div>
                                         <div class="c-booking__input">
                                             <input type="text" placeholder="Обратно" autocomplete="off" required />
                                             <svg class="icon icon--calendar"><use xlink:href="images/_sprite.svg#icon--calendar"></use></svg>
+                                            <span class="c-booking__input--clear">
+                                                Очистить
+                                            </span>
+                                            <span class="c-booking__input--close"></span>
                                         </div>
                                     </div>
                                     <div class="c-booking__column c-booking__column--add">
@@ -463,20 +463,17 @@
                                         </div>
                                     </div>
                                     <div class="c-booking__column c-booking__column--passengers" data-title="Пассажиры, класс">
-                                        <div class="c-booking__panel">
-                                            <div class="c-booking__panel--title">
-                                                Пассажиры
-                                            </div>
-                                            <div class="c-booking__panel--close"></div>
-                                        </div>
                                         <div class="c-booking__input">
                                             <div class="c-booking__input--column">
                                                 <span id="c-booking__count--adult">1</span> взрослый, эконом
                                             </div>
                                             <svg class="icon icon--user"><use xlink:href="images/_sprite.svg#icon--user"></use></svg>
+                                            <span class="c-booking__input--close">
+                                                Готово
+                                            </span>
                                         </div>
                                         <div class="c-booking__dropdown" id="c-booking__count">
-                                            <div class="c-booking__dropdown--header">
+                                            <div class="c-booking__dropdown--header c-booking__dropdown--passengers">
                                                 Пассажиры
                                             </div>
                                             <div class="c-booking__dropdown--item c-booking--no-pointer c-booking__dropdown--bt-0 c-booking__dropdown--h">
@@ -518,7 +515,7 @@
                                                     <a class="c-booking__count--plus" href="#c-booking__count--default"></a>
                                                 </div>
                                             </div>
-                                            <div class="c-booking__dropdown--header c-booking__dropdown--bt">
+                                            <div class="c-booking__dropdown--header c-booking__dropdown--bt c-booking__dropdown--service">
                                                 Класс обслуживания
                                             </div>
                                             <div class="c-booking__dropdown--item c-booking--no-pointer c-booking__dropdown--bt-0 c-booking__dropdown--h">

@@ -159,7 +159,7 @@
                 .siblings()
                 .removeClass('c-booking--open');
 
-        }), $body.on('click', '.c-booking__panel--close, .c-booking__change', function(e) {
+        }), $body.on('click', '.c-booking__panel--close, .c-booking__change, .c-booking__input--close', function(e) {
             e.stopPropagation();
             $('.l-body').removeClass('l-body--overflow');
             $('.c-booking__column').removeClass('c-booking--open');
@@ -331,11 +331,12 @@
 
         // .c-booking--difficult
         // --------------------------------------------------------------
-        $body.on('click', '.c-booking--difficult input', function() {
+        $body.on('click', '.c-booking--difficult .c-booking__column', function() {
             $(this).closest('.c-booking__column').addClass('c-booking__column--has-value');
+            $(this).find('input[type="text"]').focus();
 
         }), $('.c-booking--difficult input').each(function () {
-            if ($(this).val()) {
+            if ($(this).val() > 0 ) {
                 $(this).closest('.c-booking__column').addClass('c-booking__column--has-value');
             }
 
@@ -353,9 +354,14 @@
         // --------------------------------------------------------------
         $body.on('click', '[data-form="c-booking--complex"]', function() {
             $('.c-booking--difficult').addClass('c-booking--complex');
+            $('.c-booking--difficult').removeClass('c-booking--one-way');
+
+        }), $body.on('click', '[data-form="c-booking--one-way"]', function() {
+            $('.c-booking--difficult').addClass('c-booking--one-way');
+            $('.c-booking--difficult').removeClass('c-booking--complex');
 
         }), $body.on('click', '[data-form="c-booking--difficult"]', function() {
-            $('.c-booking--difficult').removeClass('c-booking--complex')
+            $('.c-booking--difficult').removeClass('c-booking--complex c-booking--one-way');
         });
 
 

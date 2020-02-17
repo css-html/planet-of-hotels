@@ -87,4 +87,45 @@
 
     // influence
     //-----------------------------------------------------------
+    .c-booking--difficult .c-booking--open.c-booking__column--passengers @{r} {
+
+        @media (max-width: 1151px) {
+            flex-grow: 1;
+            margin-top: 10px;
+            position: relative;
+
+            &__icon {
+                height: 14px;
+                min-width: 14px;
+                margin-right: 16px;
+            }
+
+            &__title {
+                color: #8593a2;
+                font-size: 18px;
+            }
+
+            :checked {
+
+                ~ @{r}__title {
+                    color: @black;
+
+                    &:after {
+                        top: -10px;
+                        left: -20px;
+                        right: -20px;
+                        bottom: -10px;
+                        z-index: -1;
+                        content: '';
+                        position: absolute;
+                        background-color: #f3f5f8;
+                    }
+                }
+
+                ~ @{r}__icon {
+                    border-color: @blue;
+                }
+            }
+        }
+    }
 }
