@@ -11,7 +11,7 @@
         justify-content: center;
         width: 100%;
         color: @black;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 900;
         line-height: 1.2;
         text-align: center;
@@ -23,6 +23,19 @@
 
         @media (min-width: 1152px) {
             font-size: 36px;
+        }
+
+        &__text {
+            font-weight: 300;
+            line-height: 1.86;
+
+            @media (min-width: 1152px) {
+                max-width: 1000px;
+                margin: 0 auto;
+                font-size: 16px;
+                line-height: 1.75;
+                text-align: center;
+            }
         }
 
         // modifier

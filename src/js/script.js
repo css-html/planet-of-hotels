@@ -106,6 +106,21 @@
         });
 
 
+        // .c-alphabet
+        // --------------------------------------------------------------
+        $body.on('click', 'a[href^="#c-alphabet"]', function(a) {
+
+            a.preventDefault();
+            var b = $(this).attr('href');
+
+            $(b).addClass('c-alphabet__content--active');
+            $(b).siblings().removeClass('c-alphabet__content--active');
+
+            $(this).addClass('c-alphabet__nav--active');
+            $(this).siblings().removeClass('c-alphabet__nav--active');
+        });
+
+
         // .c-select
         // ------------------------------------------------------------
         $body.on('click', '.c-select', function() {
