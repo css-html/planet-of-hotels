@@ -556,6 +556,42 @@
         });
 
 
+        // .c-slick__popular-flights
+        // --------------------------------------------------------------
+        $('.c-slick__popular-flights').slick({
+            rows: 1,
+            infinite: true,
+            slidesPerRow: 6,
+            arrows: true,
+            prevArrow: '<div class="c-slick__arrow c-slick__arrow--prev"></div>',
+            nextArrow: '<div class="c-slick__arrow c-slick__arrow--next"></div>',
+            responsive: [
+                {
+                breakpoint: 1151,
+                settings: "unslick"
+                }
+            ]
+        });
+
+
+        // .c-slick__popular-flights-city
+        // --------------------------------------------------------------
+        $('.c-slick__popular-flights-city').slick({
+            rows: 2,
+            infinite: true,
+            slidesPerRow: 4,
+            arrows: true,
+            prevArrow: '<div class="c-slick__arrow c-slick__arrow--prev"></div>',
+            nextArrow: '<div class="c-slick__arrow c-slick__arrow--next"></div>',
+            responsive: [
+                {
+                breakpoint: 1151,
+                settings: "unslick"
+                }
+            ]
+        });
+
+
         // .c-slick__route
         // --------------------------------------------------------------
         $('.c-slick__route').slick({
