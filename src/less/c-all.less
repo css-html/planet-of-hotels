@@ -47,13 +47,16 @@
 
             &:after,
             &:before {
-                top: 0;
-                bottom: 0;
-                width: 30px;
-                content: '';
-                margin: 0 1px;
-                position: absolute;
-                background-color: @white;
+
+                @media (min-width: 1125px) {
+                    top: 0;
+                    bottom: 0;
+                    width: 30px;
+                    content: '';
+                    margin: 0 1px;
+                    position: absolute;
+                    background-color: @white;
+                }
             }
 
             &:after {

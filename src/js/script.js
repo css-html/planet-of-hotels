@@ -121,6 +121,17 @@
         });
 
 
+        // .c-show
+        // --------------------------------------------------------------
+        $body.on('click', 'a[href^="#c-show"]', function(a) {
+            a.preventDefault();
+            var b = $(this).attr('href');
+
+            $(b).toggleClass('c-show--active');
+            $(this).toggleClass('c-show--collapse');
+        });
+
+
         // .c-select
         // ------------------------------------------------------------
         $body.on('click', '.c-select', function() {

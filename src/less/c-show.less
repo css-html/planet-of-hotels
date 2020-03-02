@@ -1,0 +1,118 @@
+/* .c-show
+---------------------------------------------------------------*/
+& {
+    @r: ~ '.c-show';
+
+    // base
+    //-----------------------------------------------------------
+    @{r} {
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        &:before {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+            height: 1px;
+            margin: auto;
+            position: absolute;
+            background-color: @gray-light;
+        }
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: @black;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 0 32px;
+            cursor: pointer;
+            position: relative;
+            text-transform: uppercase;
+            background-color: @white;
+            transition: color .3s;
+
+            &:after {
+                left: 0;
+                right: 0;
+                top: 100%;
+                width: 8px;
+                height: 8px;
+                content: '';
+                margin: auto;
+                margin-top: 4px;
+                position: absolute;
+                border-right: 1px solid;
+                border-bottom: 1px solid;
+                transform: rotate(45deg);
+                transition: transform .3s;
+            }
+
+            &:hover {
+
+                @media (min-width: 1152px) {
+                    color: @blue;
+                }
+            }
+        }
+
+        // modifier
+        //-------------------------------------------------------
+        &--hidden {
+            display: none !important;
+            animation-name: fadeIn;
+            animation-duration: .3s;
+            animation-fill-mode: both;
+        }
+
+        &--collapse {
+
+            @{r}__text {
+                font-size: 0;
+
+                &[data-collapse]:before {
+                    font-size: 12px;
+                    content: attr(data-collapse);
+                }
+
+                &:after {
+                    transform: rotate(-135deg);
+                }
+            }
+        }
+
+        &--active {
+
+            @{r}--hidden {
+                display: block !important;
+            }
+        }
+    }
+
+    // influence
+    //-----------------------------------------------------------
+    [class*="l-row--bg-gray"] @{r} {
+
+        &__text {
+            background-color: #f3f5f8;
+        }
+    }
+
+    .c-ticket__table@{r}--active {
+
+
+        @{r}--hidden {
+            display: flex !important;
+        }
+
+        // @{r}--hidden:not(@{r}--active) {
+
+        //         border: none !important;
+
+        // }
+    }
+}

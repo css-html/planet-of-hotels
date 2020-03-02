@@ -77,6 +77,85 @@
                 margin-top: 0;
             }
         }
+
+        &--w-1000 {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &--bg-gray {
+            position: relative;
+
+            > * {
+                z-index: 1;
+                position: relative;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                background-color: #f3f5f8;
+
+                @media (max-width: 767px) {
+                    top: -@gap * 3;
+                    left: -@gap;
+                    right: -@gap;
+                    bottom: -@gap * 3;
+                }
+
+                @media (min-width: 768px) {
+                    top: -@gap * 4;
+                    left: 50%;
+                    bottom: -@gap * 4;
+                    width: 100vw;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+
+        &--bg-gray-line {
+            position: relative;
+
+            &:before {
+
+                @media (min-width: 1152px) {
+                    top: 0;
+                    left: 50%;
+                    bottom: 0;
+                    width: 130vw;
+                    height: 55%;
+                    margin: auto;
+                    content: '';
+                    position: absolute;
+                    background-color: #f3f5f8;
+                    transform: translateX(-50%) rotate(15deg);
+                }
+            }
+        }
+
+        &--bg-gray-max-1151 {
+
+            @media (max-width: 1151px) {
+                position: relative;
+
+                > * {
+                    z-index: 1;
+                    position: relative;
+                }
+
+                &:before {
+                    top: -@gap;
+                    left: -@gap;
+                    right: -@gap;
+                    bottom: -@gap;
+                    content: '';
+                    margin: auto;
+                    position: absolute;
+                    background-color: #f3f5f8;
+                }
+            }
+        }
     }
 
     // influence
