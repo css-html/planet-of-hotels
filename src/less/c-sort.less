@@ -15,12 +15,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 34px;
+            height: 32px;
             color: @black;
             padding: 0 10px;
             margin-right: 10px;
             border: 1px solid @gray-light;
             transition: .3s;
+
+            @media (max-width: 767px) {
+                width: 33%;
+            }
+
+            @media (max-width: 374px) {
+                font-size: 12px;
+            }
 
             @media (min-width: 768px) {
                 padding: 0 20px;
@@ -33,6 +41,7 @@
 
             .icon {
                 flex: none;
+                font-size: 14px;
                 margin-right: 6px;
             }
 

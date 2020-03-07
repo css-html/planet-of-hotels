@@ -660,6 +660,24 @@
         });
 
 
+        // .c-slick__card--slideset
+        // --------------------------------------------------------------
+        $('.c-slick__card--slideset').slick({
+            arrows: true,
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            prevArrow: '<div class="c-slick__arrow c-slick__arrow--prev"></div>',
+            nextArrow: '<div class="c-slick__arrow c-slick__arrow--next"></div>',
+            responsive: [
+                {
+                breakpoint: 1151,
+                settings: "unslick"
+                }
+            ]
+        });
+
+
     }); // end ready
 
 })(jQuery);

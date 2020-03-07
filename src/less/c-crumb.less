@@ -67,42 +67,23 @@
 
         // modifier
         //-------------------------------------------------------
-        // &--standart {
-        //     justify-content: flex-start;
+        &--standart {
+            justify-content: flex-start;
 
-        //     @{r}__link {
-        //         font-size: 12px;
+            @{r}__link {
+                color: #8593a2;
 
-        //         @media (min-width: 768px) {
-        //             font-size: 14px;
-        //         }
-        //     }
+                &--current {
+                    color: @black;
+                    font-weight: 400;
+                }
+            }
 
-        //     @{r}__separator {
-        //         border-right-color: #8593a2;
-        //         border-bottom-color: #8593a2;
-        //     }
-        // }
-
-        // &--overflow {
-        //     display: flex;
-        //     align-items: center;
-        //     overflow-x: auto;
-
-        //     @media (min-width: 1152px) {
-        //         flex-wrap: wrap;
-        //         overflow-x: hidden;
-        //     }
-        // }
-
-        // &--left {
-        //     justify-content: flex-start;
-
-        //     @{r}__separator {
-        //         border-right-color: #8593a2;
-        //         border-bottom-color: #8593a2;
-        //     }
-        // }
+            @{r}__separator {
+                border-right-color: #8593a2;
+                border-bottom-color: #8593a2;
+            }
+        }
     }
 
     // influence

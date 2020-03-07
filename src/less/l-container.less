@@ -6,10 +6,22 @@
     // base
     //-----------------------------------------------------------
     @{r} {
+        flex: none;
         .mixin-container();
 
         // modifier
         //-------------------------------------------------------
+        &--bg {
+            background-color: @purple;
+        }
+
+        &--pt-10 {
+            padding-top: 10px;
+        }
+
+        &--pb-10 {
+            padding-bottom: 10px;
+        }
     }
 
     // influence

@@ -122,6 +122,27 @@
 
         // modifier
         //-------------------------------------------------------
+        &--sort {
+            width: auto;
+            margin-left: 20px;
+
+            @{r}__selected {
+                height: 32px;
+                min-width: 130px;
+                padding-left: 10px;
+                padding-right: 26px;
+                white-space: nowrap;
+
+                &:after {
+                    display: none;
+                }
+
+                &:before {
+                    right: 10px;
+                }
+            }
+        }
+
         // &--icon-left {
         //     display: flex;
         //     position: relative;
@@ -138,43 +159,6 @@
         //         color: @white;
         //         font-size: 18px;
         //         position: absolute;
-        //     }
-        // }
-
-        // &--sort {
-        //     display: none;
-
-        //     @media (min-width: 1152px) {
-        //         width: auto;
-        //         display: block;
-        //     }
-
-        //     @{r}__wrap {
-        //         display: flex;
-        //         align-items: center;
-        //         height: 34px;
-        //         cursor: pointer;
-        //         padding-left: 10px;
-        //         border: 1px solid #e6e9ee;
-        //         transition: .3s;
-
-        //         &:hover {
-        //             border-color: @purple;
-        //         }
-        //     }
-
-        //     @{r}__title {
-        //         color: @gray-dark;
-        //         white-space: nowrap;
-        //     }
-
-        //     @{r}__selected {
-        //         border: 0;
-        //         height: auto;
-        //         line-height: inherit;
-        //         color: @black;
-        //         font-weight: 600;
-        //         padding-left: 6px;
         //     }
         // }
     }
