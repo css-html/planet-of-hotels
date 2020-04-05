@@ -418,6 +418,11 @@
         $('#c-gallery__grid').lightGallery();
 
 
+        // .c-photo
+        // --------------------------------------------------------------
+        $('#c-photo').lightGallery();
+
+
         // .c-filter
         // --------------------------------------------------------------
         $body.on('click', '.c-filter__title', function() {

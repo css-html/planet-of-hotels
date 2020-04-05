@@ -86,8 +86,26 @@
             }
         }
 
+        &--green {
+            color: @white;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 0 40px;
+            text-transform: uppercase;
+            background-color: #44b759;
+            transition: 0s;
+
+            &:hover {
+                background-image: linear-gradient(to right, #2ea043 0%, #3fb254 40%, #3fb254 60%, #2ea043 100%);
+            }
+        }
+
         &--ml-20 {
             margin-left: 20px;
+        }
+
+        &--grow {
+            flex-grow: 1;
         }
     }
 

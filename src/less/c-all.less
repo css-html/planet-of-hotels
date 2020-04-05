@@ -83,6 +83,7 @@
             margin-left: 10px;
             white-space: nowrap;
             text-transform: uppercase;
+            transition: .3s;
 
             @media (min-width: 768px) {
                 font-size: 12px;
@@ -92,16 +93,55 @@
                 display: none;
             }
 
+            &--visible {
+                display: flex;
+            }
+
             .icon {
                 min-width: 14px;
                 margin-left: 10px;
+            }
+
+            &:hover {
+                color: @blue;
             }
         }
 
         // modifier
         //-------------------------------------------------------
+        &--has-arrow {
+            display: flex;
+            align-items: center;
+
+            &:after {
+                width: 6px;
+                height: 6px;
+                content: '';
+                margin-left: 4px;
+                border-top: 2px solid;
+                border-right: 2px solid;
+                transform: rotate(45deg);
+            }
+        }
+
+        &--fs-12 {
+            font-size: 12px;
+        }
+
+        &--fs-14 {
+            font-size: 14px;
+        }
+
+        &--fw-600 {
+            font-weight: 600;
+        }
+
         &--mt-40 {
             margin-top: 40px;
+        }
+
+        &--transform-none {
+            text-transform: none;
         }
 
         &--blue {

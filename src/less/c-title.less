@@ -101,6 +101,10 @@
                     background-color: @gray-dark;
                 }
             }
+
+            &.gray:after {
+                background-color: #d8dfe9;
+            }
         }
 
         &--has-arrow {
@@ -189,12 +193,20 @@
             }
         }
 
+        &--grow-0 {
+            flex-grow: 0;
+        }
+
         &--fs-16 {
             font-size: 14px;
 
             @media (min-width: 1152px) {
                 font-size: 16px;
             }
+        }
+
+        &--fs-18 {
+            font-size: 18px;
         }
 
         &--fs-20 {
@@ -236,6 +248,10 @@
 
         &--fw-600 {
             font-weight: 600;
+        }
+
+        &--fw-900 {
+            font-weight: 900;
         }
 
         &--width-auto {
