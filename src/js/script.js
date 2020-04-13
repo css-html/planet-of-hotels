@@ -683,6 +683,32 @@
         });
 
 
+        // .c-modal__slider--big
+        // --------------------------------------------------------------
+        $('.c-modal__slider--big').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            fade: true,
+            dots: false,
+            asNavFor: '.c-modal__slider--small',
+            prevArrow: '<div class="c-slick__arrow c-slick__arrow--prev"></div>',
+            nextArrow: '<div class="c-slick__arrow c-slick__arrow--next"></div>',
+        });
+
+
+        // .c-modal__slider--small
+        // --------------------------------------------------------------
+        $('.c-modal__slider--small').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            asNavFor: '.c-modal__slider--big',
+            dots: false,
+            arrows: false,
+            focusOnSelect: true
+        });
+
+
     }); // end ready
 
 })(jQuery);
