@@ -8,7 +8,7 @@
 
     <div class="c-modal c-modal--1100 c-modal--active">
         <div class="c-modal__wrap">
-            <div class="c-modal__content">
+            <div class="c-modal__content min-1152">
                 <div class="l-row">
                     <div class="c-modal__title">
                         Double or Twin Room
@@ -143,24 +143,137 @@
                         </div>
                     </div>
                 </div>
-                <div class="l-row">
+                <div class="l-row l-row--mt-20">
                     <div class="c-modal__title c-modal--fw-900">
                         Введите даты чтобы проверить наличие мест
                     </div>
                 </div>
-                <div class="l-row">
+                <div class="l-row l-row--mt-20">
                     <form class="c-modal__form">
-                        <div class="c-modal__form--column"></div>
-                        <div class="c-modal__form--column"></div>
-                        <div class="c-modal__form--column"></div>
-                        <div class="c-modal__form--column"></div>
+                        <div class="c-modal__form--row">
+                            <div class="c-modal__form--column">
+                                <div class="c-modal__form--icon">
+                                    <img src="images/all/room__search-calendar.svg" alt="image">
+                                </div>
+                                <input type="text" placeholder="Дата заезда" required>
+                                <div class="c-modal__form--arrow">
+                                    <div class="c-modal__form--prev"></div>
+                                    <div class="c-modal__form--next"></div>
+                                </div>    
+                            </div>
+                            <div class="c-modal__form--column">
+                                <div class="c-modal__form--icon">
+                                    <img src="images/all/room__search-calendar.svg" alt="image">
+                                </div>
+                                <input type="text" placeholder="Дата заезда" required>
+                                <div class="c-modal__form--arrow">
+                                    <div class="c-modal__form--prev"></div>
+                                    <div class="c-modal__form--next"></div>
+                                </div>    
+                            </div>
+                            <div class="c-modal__form--column">
+                                <div class="c-modal__form--icon">
+                                    <img src="images/all/modal__bed.svg" alt="image">
+                                </div>
+                                <input type="text" placeholder="2 взрослых - 0 детей - 1 номер" required>    
+                            </div>
+                            <div class="c-modal__form--column">
+                                <button class="c-modal__form--button c-button c-button--blue" type="submit">
+                                    <span class="c-button__inner">
+                                        <svg class="icon icon--search"><use xlink:href="images/_sprite.svg#icon--search"></use></svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
                     </form>
                 </div>
-
-
-
-                <div class="l-row"></div>
-
+                <div class="l-row l-row--mt-20">
+                    <div class="c-checkbox">
+                        <label class="c-checkbox__label">
+                            <input type="checkbox" name="checkbox" checked>
+                            <span class="c-checkbox__icon"></span>
+                            <span class="c-checkbox__title c-checkbox--pt-2">
+                                Показать цены на других сайтах в новом окне
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="l-row l-row--mt-20">
+                    <div class="c-modal__title c-modal--fw-900 c-modal--fs-18">
+                        Двухместный номер Делюкс с 1 кроватью
+                    </div>
+                </div>
+                <div class="l-row l-row--mt-10">
+                    <div class="c-modal__service">
+                        <div class="c-modal__service--column">
+                            <div class="c-modal__service--icon">
+                                <img src="images/all/modal__dinner.svg" alt="image">
+                            </div>
+                            <div class="c-modal__service--text">
+                                Включен полный английский завтрак
+                            </div>
+                        </div>
+                        <div class="c-modal__service--column">
+                            <div class="c-modal__service--icon">
+                                <img src="images/all/modal__bed.svg" alt="image">
+                            </div>
+                            <div class="c-modal__service--text">
+                                1 большая двуспальная кровать
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-row l-row--mt-10">
+                    <form class="c-modal__reservation">
+                        <div class="c-modal__reservation--row">
+                            <div class="c-modal__reservation--column">
+                                Стоимость не возвращается
+                            </div>
+                            <div class="c-modal__reservation--column">
+                                <div class="c-modal__reservation--users">
+                                    <img src="images/all/room__user.svg" alt="image">
+                                    <img src="images/all/room__user.svg" alt="image">
+                                </div>
+                            </div>
+                            <div class="c-modal__reservation--column">
+                                <div class="c-modal__reservation--price">
+                                    4 879 <span class="c-modal__reservation--currency">UAH</span>
+                                </div>
+                            </div>
+                            <div class="c-modal__reservation--column">
+                                <div class="c-room__table--select c-select c-select--w-auto">
+                                    <div class="c-select__selected">
+                                        Выбрать
+                                    </div>
+                                    <div class="c-select__dropdown c-select__dropdown--top">
+                                        <div class="c-select__scroll">
+                                            <div class="c-select__item">
+                                                <div class="c-select__item--title">
+                                                    Выбор-1
+                                                </div>
+                                            </div>
+                                            <div class="c-select__item">
+                                                <div class="c-select__item--title">
+                                                    Выбор-2
+                                                </div>
+                                            </div>
+                                            <div class="c-select__item">
+                                                <div class="c-select__item--title">
+                                                    Выбор-3
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="c-modal__reservation--button c-button c-button--green" type="submit">
+                                    <span class="c-button__inner">
+                                        Забронировать
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
                 <div class="c-modal__close"></div>
             </div>
         </div>
