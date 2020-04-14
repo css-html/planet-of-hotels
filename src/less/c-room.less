@@ -118,6 +118,7 @@
             font-weight: 600;
             padding: 0 10px;
             border-radius: 2px;
+            white-space: nowrap;
 
             &--red {
                 color: #ffffff;
@@ -323,6 +324,29 @@
             }
         }
 
+        &__more {
+            display: inline-flex;
+            align-items: center;
+            color: @black;
+            font-size: 12px;
+            font-weight: 600;
+            transition: .3s;
+
+            &:after {
+                width: 5px;
+                height: 5px;
+                content: '';
+                margin-left: 6px;
+                border-top: 1px solid;
+                border-right: 1px solid;
+                transform: rotate(45deg);
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
         &__all {
             display: flex;
             align-items: center;
@@ -349,8 +373,74 @@
             }
         }
 
+        &__bed {
+            display: flex;
+            align-items: center;
+
+            &--img {
+                display: flex;
+                align-items: center;
+                margin-left: 10px;
+
+                img {
+                    width: auto;
+                    max-width: 14px;
+                    margin-right: 4px;
+                }
+            }
+        }
+
         // modifier
         //-------------------------------------------------------
+        &--no-date {
+
+            @{r}__left {
+                min-width: 152px;
+                max-width: 152px;
+
+                @{r}__photo {
+                    height: 152px;
+                }
+            }
+
+            @{r}__table {
+
+                &--tbody @{r}__table--tr @{r}__table--td {
+                
+                    &:nth-child(1) {
+                        width: 100%;
+                    }
+
+                    &:nth-child(2) {
+                        width: 100%;
+                        min-width: 60px;
+                        max-width: 60px;
+                    }
+
+                    &:nth-child(3) {
+                        width: 100%;
+                        min-width: 220px;
+                        max-width: 220px;
+                    }
+                } 
+
+                &--tr {
+                    border-top: 0;
+                }
+                
+                &--button {
+                    margin-left: 0;
+                }
+
+                &--flex {
+                    justify-content: flex-end;
+                }
+            }
+        }
+
+        &--mt-10 {
+            margin-top: 10px;
+        }
     }
 
     // influence
