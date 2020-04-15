@@ -554,6 +554,36 @@
             }
         }
 
+        &__accordion {
+
+            &--title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 16px;
+                font-weight: 900;
+
+                &:after {
+                    width: 8px;
+                    height: 8px;
+                    content: '';
+                    margin-right: 2px;
+                    margin-bottom: 2px;
+                    border-right: 2px solid;
+                    border-bottom: 2px solid;
+                    transform: rotate(45deg);
+                }
+            }
+
+            &--content {
+                margin: 0;
+                padding-left: 0;
+                column-count: 2;
+                column-gap: 20px;
+                padding-left: 18px;
+            }
+        }
+
         // modifier
         //-------------------------------------------------------
         &--active {
