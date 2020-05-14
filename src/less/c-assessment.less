@@ -24,10 +24,14 @@
                 width: 5px;
                 height: 5px;
                 content: '';
-                margin-left: 4px;
+                margin-left: 6px;
                 border-top: 1px solid;
                 border-right: 1px solid;
                 transform: rotate(45deg);
+            }
+
+            &--arrow-down:after {
+                transform: rotate(135deg);
             }
 
             &:hover {
@@ -37,6 +41,17 @@
 
         // modifier
         //-------------------------------------------------------
+        &--fs-12 {
+            font-size: 12px;
+        }
+
+        &--clamp {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+        }
     }
 
     // influence

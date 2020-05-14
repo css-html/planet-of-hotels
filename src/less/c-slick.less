@@ -241,6 +241,20 @@
             }
         }
 
+        &__ribbon {
+            display: flex;
+            align-items: center;
+            top: 20px;
+            left: -10px;
+            z-index: 1;
+            color: #ffffff;
+            font-size: 12px;
+            padding: 0 6px;
+            line-height: 22px;
+            position: absolute;
+            background-color: rgba(203, 210, 223,.5);
+        }
+
         // modifier
         //-------------------------------------------------------
         &--100vw {
@@ -298,6 +312,10 @@
                     right: 0;
                 }
             }
+        }
+
+        &--relative {
+            position: relative;
         }
     }
 

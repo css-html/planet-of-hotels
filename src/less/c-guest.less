@@ -8,12 +8,23 @@
     @{r} {
         display: flex;
 
+        @media (max-width: 767px) {
+            overflow: auto;
+        }
+
         &__column {
             padding: 10px;
             border-radius: 3px;
             border: 1px solid rgba(210, 215, 223, 0.69);
             margin-right: 10px;
             .mixin-grid(4, 10px);
+
+            @media (max-width: 767px) {
+                border: 0;
+                padding: 0;
+                min-width: 140px;
+                margin-right: 20px;
+            }
         }
 
         &__row {
@@ -104,6 +115,13 @@
             border-radius: 6px;
             border-bottom-left-radius: 0;
             background-color: @blue;
+
+            @media (max-width: 767px) {
+                width: 24px;
+                height: 24px;
+                font-size: 12px;
+                margin-left: 10px;
+            }
         }
 
         &__mark {
