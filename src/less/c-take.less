@@ -62,9 +62,46 @@
 
         // modifier
         //-------------------------------------------------------
+        &--choose {
+
+            @{r}__column {
+                padding-right: 10px;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+                
+                &:nth-child(1) {
+                    flex-grow: 1;
+                }
+
+                &:nth-child(2) {
+                    min-width: 60px;
+                    max-width: 60px;
+                }
+
+                &:nth-child(3) {
+                    min-width: 120px;
+                    max-width: 120px;
+                }
+            }
+
+            @{r}__text {
+                font-size: 14px;
+                text-decoration: underline;
+            }
+
+            @{r}__button {
+                width: 100%;
+                font-size: 14px;
+            }
+
+        }
+
         &--green {
             color: #44b759;
         }
+
     }
 
     // influence
