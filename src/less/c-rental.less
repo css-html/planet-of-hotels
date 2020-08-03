@@ -391,7 +391,12 @@
         padding: 20px;
         margin-top: 16px;
         border-radius: 10px;
+        position: relative;
         background-color: #f3f5f8;
+
+        @media (max-width: 767px) {
+          padding-right: 56px;
+        }
 
         &:first-child {
           margin-top: 0;
@@ -403,6 +408,19 @@
           &:first-child {
             margin-top: 0;
           }
+        }
+
+        @{r}__review--score {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          position: absolute;
+          transform: translateX(50%);
+
+          @media (max-width: 767px) {
+            transform: translateX(-10px);
+          }  
         }
       }
 
