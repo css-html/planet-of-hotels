@@ -31,7 +31,7 @@ function serve(done) {
     server.init({
         server: {
             baseDir: manifest.paths.dist + "/",
-            index: '_.html',
+            index: 'index.html',
             routes: {
                 "/css": manifest.paths.dist + "/css",
                 "/fonts": manifest.paths.dist + "/fonts",

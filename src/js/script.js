@@ -184,6 +184,12 @@
         .toggleClass("c-booking--active")
         .siblings()
         .removeClass("c-booking--active");
+
+      $(this)
+        .closest(".c-booking__wrap--row")
+        .siblings()
+        .find(".c-booking__column")
+        .removeClass("c-booking--active");
     }),
       $(".c-booking__dropdown--item").on("click", function () {
         var bookingLocation = $(this)
@@ -819,20 +825,17 @@
         ],
       }),
       $(".c-slick__arrow").click(function () {
-        $(".c-slick__rental--2, .c-slick__rental--4").on("init reInit afterChange", function (
-          event,
-          slick,
-          currentSlide,
-          nextSlide
-        ) {
-          var i = (currentSlide ? currentSlide : 0) + 1;
-          $(this)
-            .closest(".c-slick__wrap")
-            .find(".c-slick__quantity")
-            .text(i + " / " + slick.slideCount);
-        });
+        $(".c-slick__rental--2, .c-slick__rental--4").on(
+          "init reInit afterChange",
+          function (event, slick, currentSlide, nextSlide) {
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            $(this)
+              .closest(".c-slick__wrap")
+              .find(".c-slick__quantity")
+              .text(i + " / " + slick.slideCount);
+          }
+        );
       });
-
 
     // .c-slick__rental--review
     // --------------------------------------------------------------
@@ -854,12 +857,20 @@
       ],
     });
 
-
-
-
-
-
-
+    // .c-booking__input--clear
+    // --------------------------------------------------------------
+    $body.on("click", '[data-form="c-booking--auto"]', function () {
+      if($('[data-form="c-booking--auto"] :checked').length > 0) {
+        $("#return-on").addClass("c-tab__item--active");
+        $("#return-off").removeClass("c-tab__item--active");
+        $(".c-booking__reset").removeClass("c-booking--hidden");
+      } else {
+        $("#return-off").addClass("c-tab__item--active");
+        $("#return-on").removeClass("c-tab__item--active");
+        $(".c-booking__reset").addClass("c-booking--hidden");
+      }
+    });
+    
 
 
 

@@ -17,29 +17,25 @@
       <div class="c-banner__info c-banner__info--max-w-1080">
         <div class="c-tab c-tab--booking c-tab--difficult">
           <div class="c-tab__title">
-            <h1 class="c-tab__title--h1">
-              Поиск дешевых авиабилетов
+            <h1 class="c-tab__title--h1 c-tab__title--fs-44">
+              Аренда автомобилей – Поиск, Сравнение, Экономия
             </h1>
-            <div class="c-tab__title--sub min-1152">
-              Мы подыщем для вас самые выгодные предложения на авиаперелеты
+            <div class="c-tab__title--sub c-tab__title--fs-24 min-1152">
+              Сравните 900 прокатных компаний в <b class="c-tab--color-blue c-tab--fw-700">53 000</b> пунктах проката!
             </div>
           </div>
-          <div class="c-tab__nav c-tab__nav--radio">
-            <label class="c-tab__label" data-form="c-booking--difficult">
-              <input type="radio" name="searchForm" checked>
+          <div class="c-tab__nav c-tab__nav--radio c-tab--justify-between">
+            <label class="c-tab__label" data-form="c-booking--auto">
+              <input type="checkbox" name="searchForm">
               <span class="c-tab__label--radio"></span>
-              Туда и обратно
+              Возврат авто в другом местоположении
             </label>
-            <label class="c-tab__label" data-form="c-booking--one-way">
-              <input type="radio" name="searchForm">
-              <span class="c-tab__label--radio"></span>
-              В одну сторону
-            </label>
-            <label class="c-tab__label" data-form="c-booking--complex">
-              <input type="radio" name="searchForm">
-              <span class="c-tab__label--radio"></span>
-              Сложный маршрут
-            </label>
+            <div class="c-booking__reset c-booking--hidden min-1152">
+              <svg class="icon icon--clear">
+                <use xlink:href="images/_sprite.svg#icon--clear"></use>
+              </svg>
+              Cбросить все
+            </div>
           </div>
           <div class="c-tab__nav max-1151">
             <a class="c-tab__link" href="javascript:void(0)" data-title="Отели">
@@ -76,11 +72,11 @@
             </a>
           </div>
           <div class="c-tab__content">
-            <div class="c-tab__item c-tab__item--active">
-              <form class="c-booking c-booking--difficult c-form">
-                <div class="c-booking__column c-booking__column--from" data-title="Откуда">
+            <div class="c-tab__item min-1152 c-tab__item--active" id="return-off">
+              <form class="c-booking c-booking--difficult c-booking--auto c-form">
+                <div class="c-booking__column c-booking__column--from" data-title="Место получения">
                   <div class="c-booking__input">
-                    <input type="text" placeholder="Откуда" autocomplete="off" required />
+                    <input type="text" placeholder="Город, аэропорт, регион" autocomplete="off" required />
                     <span class="c-booking__input--clear">
                       Очистить
                     </span>
@@ -88,14 +84,15 @@
                   </div>
                   <div class="c-booking__dropdown">
                     <div class="c-booking__dropdown--item">
-                      <div class="c-checkbox">
-                        <label class="c-checkbox__label">
-                          <input type="checkbox" name="checkbox">
-                          <span class="c-checkbox__icon"></span>
-                          <span class="c-checkbox__title">
-                            и аэропорты рядом
-                          </span>
-                        </label>
+                      <div class="c-booking__dropdown--icon">
+                        <svg class="icon icon--navigation">
+                          <use xlink:href="images/_sprite.svg#icon--navigation"></use>
+                        </svg>
+                      </div>
+                      <div class="c-booking__dropdown--info">
+                        <div class="c-booking__dropdown--location">
+                          Милан - <span class="c-booking__dropdown--region">поблизости</span>
+                        </div>
                       </div>
                     </div>
                     <div class="c-booking__dropdown--item">
@@ -188,117 +185,11 @@
                         </div>
                       </div>
                     </div>
-                    <a class="c-booking__dropdown--item" href="javascript:void(0)">
-                      <div class="c-booking__dropdown--icon">
-                        <svg class="icon icon--passport">
-                          <use xlink:href="images/_sprite.svg#icon--passport"></use>
-                        </svg>
-                      </div>
-                      <div class="c-booking__dropdown--info c-booking__dropdown--arrow">
-                        <div class="c-booking__dropdown--location">
-                          Думаете, куда бы съездить?
-                        </div>
-                        <div class="c-booking__dropdown--region">
-                          Поиск «Куда угодно» покажет все доступные варианты
-                        </div>
-                      </div>
-                    </a>
                   </div>
                 </div>
-                <div class="c-booking__column c-booking__column--where" data-title="Куда">
-                  <div class="c-booking__change">
-                    <svg class="icon icon--change">
-                      <use xlink:href="images/_sprite.svg#icon--change"></use>
-                    </svg>
-                  </div>
+                <div class="c-booking__column c-booking__column--visit" data-title="Получение">
                   <div class="c-booking__input">
-                    <input type="text" placeholder="Куда" autocomplete="off" required />
-                    <span class="c-booking__input--clear">
-                      Очистить
-                    </span>
-                    <span class="c-booking__input--close"></span>
-                  </div>
-                  <div class="c-booking__dropdown">
-                    <div class="c-booking__dropdown--item">
-                      <div class="c-booking__dropdown--icon">
-                        <svg class="icon icon--plane">
-                          <use xlink:href="images/_sprite.svg#icon--plane"></use>
-                        </svg>
-                      </div>
-                      <div class="c-booking__dropdown--info">
-                        <div class="c-booking__dropdown--location">
-                          Милан (MXP)
-                        </div>
-                        <div class="c-booking__dropdown--region">
-                          Италия
-                        </div>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item">
-                      <div class="c-booking__dropdown--icon">
-                        <svg class="icon icon--plane">
-                          <use xlink:href="images/_sprite.svg#icon--plane"></use>
-                        </svg>
-                      </div>
-                      <div class="c-booking__dropdown--info">
-                        <div class="c-booking__dropdown--location">
-                          Милан (MXP)
-                        </div>
-                        <div class="c-booking__dropdown--region">
-                          Италия
-                        </div>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item">
-                      <div class="c-booking__dropdown--icon">
-                        <svg class="icon icon--plane">
-                          <use xlink:href="images/_sprite.svg#icon--plane"></use>
-                        </svg>
-                      </div>
-                      <div class="c-booking__dropdown--info">
-                        <div class="c-booking__dropdown--location">
-                          Милан (MXP)
-                        </div>
-                        <div class="c-booking__dropdown--region">
-                          Италия
-                        </div>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item">
-                      <div class="c-booking__dropdown--icon">
-                        <svg class="icon icon--plane">
-                          <use xlink:href="images/_sprite.svg#icon--plane"></use>
-                        </svg>
-                      </div>
-                      <div class="c-booking__dropdown--info">
-                        <div class="c-booking__dropdown--location">
-                          Милан (MXP)
-                        </div>
-                        <div class="c-booking__dropdown--region">
-                          Италия
-                        </div>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item">
-                      <div class="c-booking__dropdown--icon">
-                        <svg class="icon icon--plane">
-                          <use xlink:href="images/_sprite.svg#icon--plane"></use>
-                        </svg>
-                      </div>
-                      <div class="c-booking__dropdown--info">
-                        <div class="c-booking__dropdown--location">
-                          Милан (MXP)
-                        </div>
-                        <div class="c-booking__dropdown--region">
-                          Италия
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-booking__column c-booking__column--when" data-title="Когда">
-                  <div class="c-booking__input">
-                    <input type="text" placeholder="Когда" autocomplete="off" required />
+                    <input type="text" placeholder="вт, 3 мар, 12.00" autocomplete="off" required />
                     <svg class="icon icon--calendar">
                       <use xlink:href="images/_sprite.svg#icon--calendar"></use>
                     </svg>
@@ -308,182 +199,9 @@
                     <span class="c-booking__input--close"></span>
                   </div>
                 </div>
-
-
-                <div class="c-booking__column c-booking__column--clone c-booking__column--from" data-title="Откуда">
+                <div class="c-booking__column c-booking__column--leaving" data-title="Возврат">
                   <div class="c-booking__input">
-                    <input type="text" placeholder="Откуда" autocomplete="off" required />
-                    <span class="c-booking__input--clear">
-                      Очистить
-                    </span>
-                    <span class="c-booking__input--close"></span>
-                  </div>
-                  <div class="c-booking__dropdown">
-                    <div class="c-booking__dropdown--item">
-                      <div class="c-booking__dropdown--icon">
-                        <svg class="icon icon--pin">
-                          <use xlink:href="images/_sprite.svg#icon--pin"></use>
-                        </svg>
-                      </div>
-                      <div class="c-booking__dropdown--info">
-                        <div class="c-booking__dropdown--location">
-                          Италия
-                        </div>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item">
-                      <div class="c-booking__dropdown--icon">
-                        <svg class="icon icon--pin">
-                          <use xlink:href="images/_sprite.svg#icon--pin"></use>
-                        </svg>
-                      </div>
-                      <div class="c-booking__dropdown--info">
-                        <div class="c-booking__dropdown--location">
-                          Итальянская Ривьера
-                        </div>
-                        <div class="c-booking__dropdown--region">
-                          Регион - Италия
-                        </div>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item">
-                      <div class="c-booking__dropdown--icon">
-                        <svg class="icon icon--plane">
-                          <use xlink:href="images/_sprite.svg#icon--plane"></use>
-                        </svg>
-                      </div>
-                      <div class="c-booking__dropdown--info">
-                        <div class="c-booking__dropdown--location">
-                          Аэропорт Рим
-                        </div>
-                        <div class="c-booking__dropdown--region">
-                          Город - Лацио, Италия
-                        </div>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item">
-                      <div class="c-booking__dropdown--icon">
-                        <svg class="icon icon--bed-2">
-                          <use xlink:href="images/_sprite.svg#icon--bed-2"></use>
-                        </svg>
-                      </div>
-                      <div class="c-booking__dropdown--info">
-                        <div class="c-booking__dropdown--location">
-                          Intercontinental Rome
-                        </div>
-                        <div class="c-booking__dropdown--region">
-                          Регион - Италия
-                        </div>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item">
-                      <div class="c-booking__dropdown--icon">
-                        <svg class="icon icon--monastery">
-                          <use xlink:href="images/_sprite.svg#icon--monastery"></use>
-                        </svg>
-                      </div>
-                      <div class="c-booking__dropdown--info">
-                        <div class="c-booking__dropdown--location">
-                          Колизей
-                        </div>
-                        <div class="c-booking__dropdown--region">
-                          Регион - Италия
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-booking__column c-booking__column--clone c-booking__column--where" data-title="Куда">
-                  <div class="c-booking__change">
-                    <svg class="icon icon--change">
-                      <use xlink:href="images/_sprite.svg#icon--change"></use>
-                    </svg>
-                  </div>
-                  <div class="c-booking__input">
-                    <input type="text" placeholder="Куда" autocomplete="off" required />
-                    <span class="c-booking__input--clear">
-                      Очистить
-                    </span>
-                    <span class="c-booking__input--close"></span>
-                  </div>
-                  <div class="c-booking__dropdown">
-                    <div class="c-booking__dropdown--item">
-                      <div class="c-booking__dropdown--icon">
-                        <svg class="icon icon--pin">
-                          <use xlink:href="images/_sprite.svg#icon--pin"></use>
-                        </svg>
-                      </div>
-                      <div class="c-booking__dropdown--info">
-                        <div class="c-booking__dropdown--location">
-                          Италия
-                        </div>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item">
-                      <div class="c-booking__dropdown--icon">
-                        <svg class="icon icon--pin">
-                          <use xlink:href="images/_sprite.svg#icon--pin"></use>
-                        </svg>
-                      </div>
-                      <div class="c-booking__dropdown--info">
-                        <div class="c-booking__dropdown--location">
-                          Итальянская Ривьера
-                        </div>
-                        <div class="c-booking__dropdown--region">
-                          Регион - Италия
-                        </div>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item">
-                      <div class="c-booking__dropdown--icon">
-                        <svg class="icon icon--plane">
-                          <use xlink:href="images/_sprite.svg#icon--plane"></use>
-                        </svg>
-                      </div>
-                      <div class="c-booking__dropdown--info">
-                        <div class="c-booking__dropdown--location">
-                          Аэропорт Рим
-                        </div>
-                        <div class="c-booking__dropdown--region">
-                          Город - Лацио, Италия
-                        </div>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item">
-                      <div class="c-booking__dropdown--icon">
-                        <svg class="icon icon--bed-2">
-                          <use xlink:href="images/_sprite.svg#icon--bed-2"></use>
-                        </svg>
-                      </div>
-                      <div class="c-booking__dropdown--info">
-                        <div class="c-booking__dropdown--location">
-                          Intercontinental Rome
-                        </div>
-                        <div class="c-booking__dropdown--region">
-                          Регион - Италия
-                        </div>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item">
-                      <div class="c-booking__dropdown--icon">
-                        <svg class="icon icon--monastery">
-                          <use xlink:href="images/_sprite.svg#icon--monastery"></use>
-                        </svg>
-                      </div>
-                      <div class="c-booking__dropdown--info">
-                        <div class="c-booking__dropdown--location">
-                          Колизей
-                        </div>
-                        <div class="c-booking__dropdown--region">
-                          Регион - Италия
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-booking__column c-booking__column--clone c-booking__column--when" data-title="Когда">
-                  <div class="c-booking__input">
-                    <input type="text" placeholder="Когда" autocomplete="off" required />
+                    <input type="text" placeholder="вт, 3 мар, 12.00" autocomplete="off" required />
                     <svg class="icon icon--calendar">
                       <use xlink:href="images/_sprite.svg#icon--calendar"></use>
                     </svg>
@@ -491,159 +209,6 @@
                       Очистить
                     </span>
                     <span class="c-booking__input--close"></span>
-                  </div>
-                  <div class="c-booking__remove"></div>
-                </div>
-
-
-                <div class="c-booking__column c-booking__column--visit" data-title="Туда">
-                  <div class="c-booking__input">
-                    <input type="text" placeholder="Туда" autocomplete="off" required />
-                    <svg class="icon icon--calendar">
-                      <use xlink:href="images/_sprite.svg#icon--calendar"></use>
-                    </svg>
-                    <span class="c-booking__input--clear">
-                      Очистить
-                    </span>
-                    <span class="c-booking__input--close"></span>
-                  </div>
-                </div>
-                <div class="c-booking__column c-booking__column--leaving" data-title="Обратно">
-                  <div class="c-booking__input">
-                    <input type="text" placeholder="Обратно" autocomplete="off" required />
-                    <svg class="icon icon--calendar">
-                      <use xlink:href="images/_sprite.svg#icon--calendar"></use>
-                    </svg>
-                    <span class="c-booking__input--clear">
-                      Очистить
-                    </span>
-                    <span class="c-booking__input--close"></span>
-                  </div>
-                </div>
-                <div class="c-booking__column c-booking__column--add">
-                  <div class="c-booking__input c-booking__add">
-                    <svg class="icon icon--more">
-                      <use xlink:href="images/_sprite.svg#icon--more"></use>
-                    </svg>
-                    Добавить перелет
-                  </div>
-                </div>
-                <div class="c-booking__column c-booking__column--passengers" data-title="Пассажиры, класс">
-                  <div class="c-booking__input">
-                    <div class="c-booking__input--column">
-                      <span id="c-booking__count--adult">1</span> взрослый, эконом
-                    </div>
-                    <svg class="icon icon--user">
-                      <use xlink:href="images/_sprite.svg#icon--user"></use>
-                    </svg>
-                    <span class="c-booking__input--close">
-                      Готово
-                    </span>
-                  </div>
-                  <div class="c-booking__dropdown" id="c-booking__count">
-                    <div class="c-booking__dropdown--header c-booking__dropdown--passengers">
-                      Пассажиры
-                    </div>
-                    <div class="c-booking__dropdown--item c-booking--no-pointer c-booking__dropdown--bt-0 c-booking__dropdown--h">
-                      <div class="c-booking__dropdown--title">
-                        Взрослые
-                        <small>
-                          Старше 16 лет
-                        </small>
-                      </div>
-                      <div class="c-booking__count">
-                        <a class="c-booking__count--minus" href="#c-booking__count--adult"></a>
-                        <div class="c-booking__count--value">1</div>
-                        <a class="c-booking__count--plus" href="#c-booking__count--adult"></a>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item c-booking--no-pointer c-booking__dropdown--bt-0 c-booking__dropdown--h">
-                      <div class="c-booking__dropdown--title">
-                        Дети
-                        <small>
-                          От 2 -15 лет
-                        </small>
-                      </div>
-                      <div class="c-booking__count">
-                        <a class="c-booking__count--minus" href="#c-booking__count--default"></a>
-                        <div class="c-booking__count--value">0</div>
-                        <a class="c-booking__count--plus" href="#c-booking__count--default"></a>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item c-booking--no-pointer c-booking__dropdown--bt-0 c-booking__dropdown--h c-booking__dropdown--pb-10">
-                      <div class="c-booking__dropdown--title">
-                        Младенцы
-                        <small>
-                          От 2 -15 лет
-                        </small>
-                      </div>
-                      <div class="c-booking__count">
-                        <a class="c-booking__count--minus" href="#c-booking__count--default"></a>
-                        <div class="c-booking__count--value">0</div>
-                        <a class="c-booking__count--plus" href="#c-booking__count--default"></a>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--header c-booking__dropdown--bt c-booking__dropdown--service">
-                      Класс обслуживания
-                    </div>
-                    <div class="c-booking__dropdown--item c-booking--no-pointer c-booking__dropdown--bt-0 c-booking__dropdown--h">
-                      <div class="c-radio">
-                        <label class="c-radio__label">
-                          <input type="radio" name="serviceClass" checked>
-                          <span class="c-radio__icon"></span>
-                          <span class="c-radio__title">
-                            Эконом
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item c-booking--no-pointer c-booking__dropdown--bt-0 c-booking__dropdown--h">
-                      <div class="c-radio">
-                        <label class="c-radio__label">
-                          <input type="radio" name="serviceClass">
-                          <span class="c-radio__icon"></span>
-                          <span class="c-radio__title">
-                            Первый
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item c-booking--no-pointer c-booking__dropdown--bt-0 c-booking__dropdown--h">
-                      <div class="c-radio">
-                        <label class="c-radio__label">
-                          <input type="radio" name="serviceClass">
-                          <span class="c-radio__icon"></span>
-                          <span class="c-radio__title">
-                            Бизнес
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item c-booking--no-pointer c-booking__dropdown--bt-0 c-booking__dropdown--h">
-                      <div class="c-radio">
-                        <label class="c-radio__label">
-                          <input type="radio" name="serviceClass">
-                          <span class="c-radio__icon"></span>
-                          <span class="c-radio__title">
-                            Премиум-эконом
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item c-booking--no-pointer c-booking__dropdown--bt-0 c-booking__dropdown--h c-booking__dropdown--pb-10">
-                      <div class="c-radio">
-                        <label class="c-radio__label">
-                          <input type="radio" name="serviceClass">
-                          <span class="c-radio__icon"></span>
-                          <span class="c-radio__title">
-                            Разные
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="c-booking__dropdown--item c-booking__dropdown--done">
-                      Готово
-                    </div>
                   </div>
                 </div>
                 <div class="c-booking__column c-booking__column--submit">
@@ -656,14 +221,509 @@
                   </button>
                   <button class="c-button c-button--blue max-1151" type="submit">
                     <span class="c-button__inner">
-                      Найти билеты
+                      Найти авто
                     </span>
                   </button>
                 </div>
-                <label class="c-booking__flights-only c-tab__label c-tab__label--absolute min-1152">
-                  <input type="checkbox" name="directFlightsOnly">
+                <label class="c-booking__flights-only c-tab__label c-tab__label--absolute">
+                  <input type="checkbox" name="directFlightsOnly" checked>
                   <span class="c-tab__label--radio"></span>
-                  Только рейсы без пересадок
+                  Возраст водителя между 30 и 65
+                </label>
+                <div class="c-booking__reset c-tab__label--absolute min-1152">
+                  <svg class="icon icon--clear">
+                    <use xlink:href="images/_sprite.svg#icon--clear"></use>
+                  </svg>
+                  Cбросить все
+                </div>
+              </form>
+            </div>
+            <div class="c-tab__item min-1152" id="return-on">
+              <form class="c-booking c-booking--difficult c-booking--auto c-form">
+                <div class="c-booking__wrap">
+                  <div class="c-booking__wrap--row">
+                    <div class="c-booking__column c-booking__column--from" data-title="Место получения">
+                      <div class="c-booking__input">
+                        <input type="text" placeholder="Город, аэропорт, регион" autocomplete="off" required />
+                        <span class="c-booking__input--clear">
+                          Очистить
+                        </span>
+                        <span class="c-booking__input--close"></span>
+                      </div>
+                      <div class="c-booking__dropdown">
+                        <div class="c-booking__dropdown--item">
+                          <div class="c-booking__dropdown--icon">
+                            <svg class="icon icon--navigation">
+                              <use xlink:href="images/_sprite.svg#icon--navigation"></use>
+                            </svg>
+                          </div>
+                          <div class="c-booking__dropdown--info">
+                            <div class="c-booking__dropdown--location">
+                              Милан - <span class="c-booking__dropdown--region">поблизости</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="c-booking__dropdown--item">
+                          <div class="c-booking__dropdown--icon">
+                            <svg class="icon icon--pin">
+                              <use xlink:href="images/_sprite.svg#icon--pin"></use>
+                            </svg>
+                          </div>
+                          <div class="c-booking__dropdown--info">
+                            <div class="c-booking__dropdown--location">
+                              Милан - Все аэропорты
+                            </div>
+                            <div class="c-booking__dropdown--region">
+                              Италия
+                            </div>
+                          </div>
+                        </div>
+                        <div class="c-booking__dropdown--item">
+                          <div class="c-booking__dropdown--icon">
+                            <svg class="icon icon--plane">
+                              <use xlink:href="images/_sprite.svg#icon--plane"></use>
+                            </svg>
+                          </div>
+                          <div class="c-booking__dropdown--info">
+                            <div class="c-booking__dropdown--location">
+                              Милан (MXP)
+                            </div>
+                            <div class="c-booking__dropdown--region">
+                              Италия
+                            </div>
+                          </div>
+                        </div>
+                        <div class="c-booking__dropdown--item">
+                          <div class="c-booking__dropdown--icon">
+                            <svg class="icon icon--plane">
+                              <use xlink:href="images/_sprite.svg#icon--plane"></use>
+                            </svg>
+                          </div>
+                          <div class="c-booking__dropdown--info">
+                            <div class="c-booking__dropdown--location">
+                              Милан (MXP)
+                            </div>
+                            <div class="c-booking__dropdown--region">
+                              Италия
+                            </div>
+                          </div>
+                        </div>
+                        <div class="c-booking__dropdown--item">
+                          <div class="c-booking__dropdown--icon">
+                            <svg class="icon icon--plane">
+                              <use xlink:href="images/_sprite.svg#icon--plane"></use>
+                            </svg>
+                          </div>
+                          <div class="c-booking__dropdown--info">
+                            <div class="c-booking__dropdown--location">
+                              Милан (MXP)
+                            </div>
+                            <div class="c-booking__dropdown--region">
+                              Италия
+                            </div>
+                          </div>
+                        </div>
+                        <div class="c-booking__dropdown--item">
+                          <div class="c-booking__dropdown--icon">
+                            <svg class="icon icon--plane">
+                              <use xlink:href="images/_sprite.svg#icon--plane"></use>
+                            </svg>
+                          </div>
+                          <div class="c-booking__dropdown--info">
+                            <div class="c-booking__dropdown--location">
+                              Милан (MXP)
+                            </div>
+                            <div class="c-booking__dropdown--region">
+                              Италия
+                            </div>
+                          </div>
+                        </div>
+                        <div class="c-booking__dropdown--item">
+                          <div class="c-booking__dropdown--icon">
+                            <svg class="icon icon--plane">
+                              <use xlink:href="images/_sprite.svg#icon--plane"></use>
+                            </svg>
+                          </div>
+                          <div class="c-booking__dropdown--info">
+                            <div class="c-booking__dropdown--location">
+                              Милан (MXP)
+                            </div>
+                            <div class="c-booking__dropdown--region">
+                              Италия
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-booking__column c-booking__column--visit" data-title="Получение">
+                      <div class="c-booking__input">
+                        <input type="text" placeholder="вт, 3 мар, 12.00" autocomplete="off" required />
+                        <svg class="icon icon--calendar">
+                          <use xlink:href="images/_sprite.svg#icon--calendar"></use>
+                        </svg>
+                        <span class="c-booking__input--clear">
+                          Очистить
+                        </span>
+                        <span class="c-booking__input--close"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-booking__wrap--row">
+                    <div class="c-booking__column c-booking__column--from" data-title="Место получения">
+                      <div class="c-booking__input">
+                        <input type="text" placeholder="Город, аэропорт, регион" autocomplete="off" required />
+                        <span class="c-booking__input--clear">
+                          Очистить
+                        </span>
+                        <span class="c-booking__input--close"></span>
+                      </div>
+                      <div class="c-booking__dropdown">
+                        <div class="c-booking__dropdown--item">
+                          <div class="c-booking__dropdown--icon">
+                            <svg class="icon icon--navigation">
+                              <use xlink:href="images/_sprite.svg#icon--navigation"></use>
+                            </svg>
+                          </div>
+                          <div class="c-booking__dropdown--info">
+                            <div class="c-booking__dropdown--location">
+                              Милан - <span class="c-booking__dropdown--region">поблизости</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="c-booking__dropdown--item">
+                          <div class="c-booking__dropdown--icon">
+                            <svg class="icon icon--pin">
+                              <use xlink:href="images/_sprite.svg#icon--pin"></use>
+                            </svg>
+                          </div>
+                          <div class="c-booking__dropdown--info">
+                            <div class="c-booking__dropdown--location">
+                              Милан - Все аэропорты
+                            </div>
+                            <div class="c-booking__dropdown--region">
+                              Италия
+                            </div>
+                          </div>
+                        </div>
+                        <div class="c-booking__dropdown--item">
+                          <div class="c-booking__dropdown--icon">
+                            <svg class="icon icon--plane">
+                              <use xlink:href="images/_sprite.svg#icon--plane"></use>
+                            </svg>
+                          </div>
+                          <div class="c-booking__dropdown--info">
+                            <div class="c-booking__dropdown--location">
+                              Милан (MXP)
+                            </div>
+                            <div class="c-booking__dropdown--region">
+                              Италия
+                            </div>
+                          </div>
+                        </div>
+                        <div class="c-booking__dropdown--item">
+                          <div class="c-booking__dropdown--icon">
+                            <svg class="icon icon--plane">
+                              <use xlink:href="images/_sprite.svg#icon--plane"></use>
+                            </svg>
+                          </div>
+                          <div class="c-booking__dropdown--info">
+                            <div class="c-booking__dropdown--location">
+                              Милан (MXP)
+                            </div>
+                            <div class="c-booking__dropdown--region">
+                              Италия
+                            </div>
+                          </div>
+                        </div>
+                        <div class="c-booking__dropdown--item">
+                          <div class="c-booking__dropdown--icon">
+                            <svg class="icon icon--plane">
+                              <use xlink:href="images/_sprite.svg#icon--plane"></use>
+                            </svg>
+                          </div>
+                          <div class="c-booking__dropdown--info">
+                            <div class="c-booking__dropdown--location">
+                              Милан (MXP)
+                            </div>
+                            <div class="c-booking__dropdown--region">
+                              Италия
+                            </div>
+                          </div>
+                        </div>
+                        <div class="c-booking__dropdown--item">
+                          <div class="c-booking__dropdown--icon">
+                            <svg class="icon icon--plane">
+                              <use xlink:href="images/_sprite.svg#icon--plane"></use>
+                            </svg>
+                          </div>
+                          <div class="c-booking__dropdown--info">
+                            <div class="c-booking__dropdown--location">
+                              Милан (MXP)
+                            </div>
+                            <div class="c-booking__dropdown--region">
+                              Италия
+                            </div>
+                          </div>
+                        </div>
+                        <div class="c-booking__dropdown--item">
+                          <div class="c-booking__dropdown--icon">
+                            <svg class="icon icon--plane">
+                              <use xlink:href="images/_sprite.svg#icon--plane"></use>
+                            </svg>
+                          </div>
+                          <div class="c-booking__dropdown--info">
+                            <div class="c-booking__dropdown--location">
+                              Милан (MXP)
+                            </div>
+                            <div class="c-booking__dropdown--region">
+                              Италия
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-booking__column c-booking__column--leaving" data-title="Возврат">
+                      <div class="c-booking__input">
+                        <input type="text" placeholder="вт, 3 мар, 12.00" autocomplete="off" required />
+                        <svg class="icon icon--calendar">
+                          <use xlink:href="images/_sprite.svg#icon--calendar"></use>
+                        </svg>
+                        <span class="c-booking__input--clear">
+                          Очистить
+                        </span>
+                        <span class="c-booking__input--close"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-booking__column c-booking__column--submit">
+                  <button class="c-button c-button--blue c-button--h-full min-1152" type="submit">
+                    <span class="c-button__inner">
+                      <svg class="icon icon--search">
+                        <use xlink:href="images/_sprite.svg#icon--search"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <button class="c-button c-button--blue max-1151" type="submit">
+                    <span class="c-button__inner">
+                      Найти авто
+                    </span>
+                  </button>
+                </div>
+                <div class="c-tab__label--absolute c-tab--flex c-tab--align-center">
+                  <label class="c-tab__label c-tab--mr-10">
+                    <input type="checkbox" name="checkbox" checked>
+                    <span class="c-tab__label--radio"></span>
+                    Возраст водителя между 30 и 65
+                  </label>
+                  <div class="c-select c-select--age">
+                    <div class="c-select__selected">
+                      18
+                    </div>
+                    <div class="c-select__dropdown">
+                      <div class="c-select__scroll">
+                        <div class="c-select__item">
+                          <div class="c-select__item--title">
+                            31
+                          </div>
+                        </div>
+                        <div class="c-select__item">
+                          <div class="c-select__item--title">
+                            32
+                          </div>
+                        </div>
+                        <div class="c-select__item">
+                          <div class="c-select__item--title">
+                            33
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="c-tab__item max-1151 c-tab__item--active">
+              <form class="c-booking c-booking--difficult c-booking--auto c-form">
+                <div class="c-booking__column c-booking__column--from" data-title="Pick-up Location">
+                  <div class="c-booking__input">
+                    <input type="text" placeholder="Город, аэропорт, регион" autocomplete="off" required />
+                    <span class="c-booking__input--clear">
+                      Очистить
+                    </span>
+                    <span class="c-booking__input--close"></span>
+                  </div>
+                  <div class="c-booking__dropdown">
+                    <div class="c-booking__dropdown--item">
+                      <div class="c-booking__dropdown--icon">
+                        <svg class="icon icon--navigation">
+                          <use xlink:href="images/_sprite.svg#icon--navigation"></use>
+                        </svg>
+                      </div>
+                      <div class="c-booking__dropdown--info">
+                        <div class="c-booking__dropdown--location">
+                          Милан - <span class="c-booking__dropdown--region">поблизости</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-booking__dropdown--item">
+                      <div class="c-booking__dropdown--icon">
+                        <svg class="icon icon--pin">
+                          <use xlink:href="images/_sprite.svg#icon--pin"></use>
+                        </svg>
+                      </div>
+                      <div class="c-booking__dropdown--info">
+                        <div class="c-booking__dropdown--location">
+                          Милан - Все аэропорты
+                        </div>
+                        <div class="c-booking__dropdown--region">
+                          Италия
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-booking__dropdown--item">
+                      <div class="c-booking__dropdown--icon">
+                        <svg class="icon icon--plane">
+                          <use xlink:href="images/_sprite.svg#icon--plane"></use>
+                        </svg>
+                      </div>
+                      <div class="c-booking__dropdown--info">
+                        <div class="c-booking__dropdown--location">
+                          Милан (MXP)
+                        </div>
+                        <div class="c-booking__dropdown--region">
+                          Италия
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-booking__dropdown--item">
+                      <div class="c-booking__dropdown--icon">
+                        <svg class="icon icon--plane">
+                          <use xlink:href="images/_sprite.svg#icon--plane"></use>
+                        </svg>
+                      </div>
+                      <div class="c-booking__dropdown--info">
+                        <div class="c-booking__dropdown--location">
+                          Милан (MXP)
+                        </div>
+                        <div class="c-booking__dropdown--region">
+                          Италия
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-booking__dropdown--item">
+                      <div class="c-booking__dropdown--icon">
+                        <svg class="icon icon--plane">
+                          <use xlink:href="images/_sprite.svg#icon--plane"></use>
+                        </svg>
+                      </div>
+                      <div class="c-booking__dropdown--info">
+                        <div class="c-booking__dropdown--location">
+                          Милан (MXP)
+                        </div>
+                        <div class="c-booking__dropdown--region">
+                          Италия
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-booking__dropdown--item">
+                      <div class="c-booking__dropdown--icon">
+                        <svg class="icon icon--plane">
+                          <use xlink:href="images/_sprite.svg#icon--plane"></use>
+                        </svg>
+                      </div>
+                      <div class="c-booking__dropdown--info">
+                        <div class="c-booking__dropdown--location">
+                          Милан (MXP)
+                        </div>
+                        <div class="c-booking__dropdown--region">
+                          Италия
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-booking__dropdown--item">
+                      <div class="c-booking__dropdown--icon">
+                        <svg class="icon icon--plane">
+                          <use xlink:href="images/_sprite.svg#icon--plane"></use>
+                        </svg>
+                      </div>
+                      <div class="c-booking__dropdown--info">
+                        <div class="c-booking__dropdown--location">
+                          Милан (MXP)
+                        </div>
+                        <div class="c-booking__dropdown--region">
+                          Италия
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-booking__column c-booking__column--visit" data-title="Получение">
+                  <div class="c-booking__input">
+                    <input type="text" placeholder="вт, 3 мар, 12.00" autocomplete="off" required />
+                    <svg class="icon icon--calendar">
+                      <use xlink:href="images/_sprite.svg#icon--calendar"></use>
+                    </svg>
+                    <span class="c-booking__input--clear">
+                      Очистить
+                    </span>
+                    <span class="c-booking__input--close"></span>
+                  </div>
+                </div>
+                <div class="c-booking__column c-booking__column--leaving" data-title="Время">
+                  <div class="c-booking__input">
+                    <input type="text" placeholder="12:00" autocomplete="off" required />
+                    <svg class="icon icon--time">
+                      <use xlink:href="images/_sprite.svg#icon--time"></use>
+                    </svg>
+                    <span class="c-booking__input--clear">
+                      Очистить
+                    </span>
+                    <span class="c-booking__input--close"></span>
+                  </div>
+                </div>
+                <div class="c-booking__column c-booking__column--visit" data-title="Получение">
+                  <div class="c-booking__input">
+                    <input type="text" placeholder="вт, 3 мар, 12.00" autocomplete="off" required />
+                    <svg class="icon icon--calendar">
+                      <use xlink:href="images/_sprite.svg#icon--calendar"></use>
+                    </svg>
+                    <span class="c-booking__input--clear">
+                      Очистить
+                    </span>
+                    <span class="c-booking__input--close"></span>
+                  </div>
+                </div>
+                <div class="c-booking__column c-booking__column--leaving" data-title="Время">
+                  <div class="c-booking__input">
+                    <input type="text" placeholder="12:00" autocomplete="off" required />
+                    <svg class="icon icon--time">
+                      <use xlink:href="images/_sprite.svg#icon--time"></use>
+                    </svg>
+                    <span class="c-booking__input--clear">
+                      Очистить
+                    </span>
+                    <span class="c-booking__input--close"></span>
+                  </div>
+                </div>
+                <div class="c-booking__column c-booking__column--submit">
+                  <button class="c-button c-button--blue min-1152" type="submit">
+                    <span class="c-button__inner">
+                      <svg class="icon icon--search">
+                        <use xlink:href="images/_sprite.svg#icon--search"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <button class="c-button c-button--blue max-1151" type="submit">
+                    <span class="c-button__inner">
+                      Найти авто
+                    </span>
+                  </button>
+                </div>
+                <label class="c-booking__flights-only c-tab__label c-tab__label--absolute">
+                  <input type="checkbox" name="directFlightsOnly" checked>
+                  <span class="c-tab__label--radio"></span>
+                  Возраст водителя между 30 и 65
                 </label>
                 <div class="c-booking__reset c-tab__label--absolute min-1152">
                   <svg class="icon icon--clear">
@@ -776,7 +836,7 @@
     </div>
     <div class="l-row">
       <div class="c-lease">
-        <a class="c-lease__item" href="javascript:void(0);"> 
+        <a class="c-lease__item" href="javascript:void(0);">
           <div class="c-lease__photo">
             <img src="images/all/lease.png" alt="image">
           </div>
@@ -785,7 +845,9 @@
               Аренда авто в Милане
             </div>
             <div class="c-lease__location">
-              <svg class="icon icon--pin"><use xlink:href="images/_sprite.svg#icon--pin"></use></svg>
+              <svg class="icon icon--pin">
+                <use xlink:href="images/_sprite.svg#icon--pin"></use>
+              </svg>
               57 мест получения
             </div>
             <div class="c-lease__price">
@@ -799,7 +861,7 @@
             </div>
           </div>
         </a>
-        <a class="c-lease__item" href="javascript:void(0);"> 
+        <a class="c-lease__item" href="javascript:void(0);">
           <div class="c-lease__photo">
             <img src="images/all/lease.png" alt="image">
           </div>
@@ -808,7 +870,9 @@
               Аренда авто в Милане
             </div>
             <div class="c-lease__location">
-              <svg class="icon icon--pin"><use xlink:href="images/_sprite.svg#icon--pin"></use></svg>
+              <svg class="icon icon--pin">
+                <use xlink:href="images/_sprite.svg#icon--pin"></use>
+              </svg>
               57 мест получения
             </div>
             <div class="c-lease__price">
@@ -822,7 +886,7 @@
             </div>
           </div>
         </a>
-        <a class="c-lease__item" href="javascript:void(0);"> 
+        <a class="c-lease__item" href="javascript:void(0);">
           <div class="c-lease__photo">
             <img src="images/all/lease.png" alt="image">
           </div>
@@ -831,7 +895,9 @@
               Аренда авто в Милане
             </div>
             <div class="c-lease__location">
-              <svg class="icon icon--pin"><use xlink:href="images/_sprite.svg#icon--pin"></use></svg>
+              <svg class="icon icon--pin">
+                <use xlink:href="images/_sprite.svg#icon--pin"></use>
+              </svg>
               57 мест получения
             </div>
             <div class="c-lease__price">
@@ -845,7 +911,7 @@
             </div>
           </div>
         </a>
-        <a class="c-lease__item" href="javascript:void(0);"> 
+        <a class="c-lease__item" href="javascript:void(0);">
           <div class="c-lease__photo">
             <img src="images/all/lease.png" alt="image">
           </div>
@@ -854,7 +920,9 @@
               Аренда авто в Милане
             </div>
             <div class="c-lease__location">
-              <svg class="icon icon--pin"><use xlink:href="images/_sprite.svg#icon--pin"></use></svg>
+              <svg class="icon icon--pin">
+                <use xlink:href="images/_sprite.svg#icon--pin"></use>
+              </svg>
               57 мест получения
             </div>
             <div class="c-lease__price">
@@ -868,7 +936,7 @@
             </div>
           </div>
         </a>
-        <a class="c-lease__item" href="javascript:void(0);"> 
+        <a class="c-lease__item" href="javascript:void(0);">
           <div class="c-lease__photo">
             <img src="images/all/lease.png" alt="image">
           </div>
@@ -877,7 +945,9 @@
               Аренда авто в Милане
             </div>
             <div class="c-lease__location">
-              <svg class="icon icon--pin"><use xlink:href="images/_sprite.svg#icon--pin"></use></svg>
+              <svg class="icon icon--pin">
+                <use xlink:href="images/_sprite.svg#icon--pin"></use>
+              </svg>
               57 мест получения
             </div>
             <div class="c-lease__price">
@@ -891,7 +961,7 @@
             </div>
           </div>
         </a>
-        <a class="c-lease__item" href="javascript:void(0);"> 
+        <a class="c-lease__item" href="javascript:void(0);">
           <div class="c-lease__photo">
             <img src="images/all/lease.png" alt="image">
           </div>
@@ -900,7 +970,9 @@
               Аренда авто в Милане
             </div>
             <div class="c-lease__location">
-              <svg class="icon icon--pin"><use xlink:href="images/_sprite.svg#icon--pin"></use></svg>
+              <svg class="icon icon--pin">
+                <use xlink:href="images/_sprite.svg#icon--pin"></use>
+              </svg>
               57 мест получения
             </div>
             <div class="c-lease__price">
@@ -914,7 +986,7 @@
             </div>
           </div>
         </a>
-        <a class="c-lease__item" href="javascript:void(0);"> 
+        <a class="c-lease__item" href="javascript:void(0);">
           <div class="c-lease__photo">
             <img src="images/all/lease.png" alt="image">
           </div>
@@ -923,7 +995,9 @@
               Аренда авто в Милане
             </div>
             <div class="c-lease__location">
-              <svg class="icon icon--pin"><use xlink:href="images/_sprite.svg#icon--pin"></use></svg>
+              <svg class="icon icon--pin">
+                <use xlink:href="images/_sprite.svg#icon--pin"></use>
+              </svg>
               57 мест получения
             </div>
             <div class="c-lease__price">
@@ -937,7 +1011,7 @@
             </div>
           </div>
         </a>
-        <a class="c-lease__item" href="javascript:void(0);"> 
+        <a class="c-lease__item" href="javascript:void(0);">
           <div class="c-lease__photo">
             <img src="images/all/lease.png" alt="image">
           </div>
@@ -946,7 +1020,9 @@
               Аренда авто в Милане
             </div>
             <div class="c-lease__location">
-              <svg class="icon icon--pin"><use xlink:href="images/_sprite.svg#icon--pin"></use></svg>
+              <svg class="icon icon--pin">
+                <use xlink:href="images/_sprite.svg#icon--pin"></use>
+              </svg>
               57 мест получения
             </div>
             <div class="c-lease__price">
@@ -983,7 +1059,7 @@
                 Hertz
               </a>
               <a class="с-rental__link" href="javascript:void(0);">
-                Keddy By 
+                Keddy By
               </a>
               <a class="с-rental__link" href="javascript:void(0);">
                 Eurocar
@@ -1003,7 +1079,7 @@
                 Hertz
               </a>
               <a class="с-rental__link" href="javascript:void(0);">
-                Keddy By 
+                Keddy By
               </a>
               <a class="с-rental__link" href="javascript:void(0);">
                 Eurocar
@@ -1023,7 +1099,7 @@
                 Hertz
               </a>
               <a class="с-rental__link" href="javascript:void(0);">
-                Keddy By 
+                Keddy By
               </a>
               <a class="с-rental__link" href="javascript:void(0);">
                 Eurocar
@@ -1043,7 +1119,7 @@
                 Hertz
               </a>
               <a class="с-rental__link" href="javascript:void(0);">
-                Keddy By 
+                Keddy By
               </a>
               <a class="с-rental__link" href="javascript:void(0);">
                 Eurocar
@@ -1063,7 +1139,7 @@
                 Hertz
               </a>
               <a class="с-rental__link" href="javascript:void(0);">
-                Keddy By 
+                Keddy By
               </a>
               <a class="с-rental__link" href="javascript:void(0);">
                 Eurocar
@@ -1083,7 +1159,7 @@
                 Hertz
               </a>
               <a class="с-rental__link" href="javascript:void(0);">
-                Keddy By 
+                Keddy By
               </a>
               <a class="с-rental__link" href="javascript:void(0);">
                 Eurocar
@@ -1103,7 +1179,7 @@
                 Hertz
               </a>
               <a class="с-rental__link" href="javascript:void(0);">
-                Keddy By 
+                Keddy By
               </a>
               <a class="с-rental__link" href="javascript:void(0);">
                 Eurocar
@@ -1123,7 +1199,7 @@
                 Hertz
               </a>
               <a class="с-rental__link" href="javascript:void(0);">
-                Keddy By 
+                Keddy By
               </a>
               <a class="с-rental__link" href="javascript:void(0);">
                 Eurocar
@@ -1150,7 +1226,7 @@
     <div class="l-row l-row--car-rental-at-airports">
       <div class="l-row l-row--flex l-row--between l-row--align-end l-row--mt-80">
         <h2 class="c-title c-title--has-image c-title--w-50">
-          Аренда авто в аэропортах      
+          Аренда авто в аэропортах
         </h2>
       </div>
       <div class="l-row">
@@ -1520,46 +1596,46 @@
       </div>
     </div>
     <div class="l-row l-row--max-767-mt-40">
-     <div class="c-hire">
-      <div class="c-hire__text">
-        <div class="c-hire__scroll" id="c-show__hire">
-          <p>
-            Сложно переоценить комфорт, который дает автомобиль. Но иногда обстоятельства складываются так, что собственное транспортное средство подвело, и вы вынуждены подстраиваться под ситуацию. Если не хотите с этим мириться, услуга аренды авто как раз для вас. На сайте Planet of Hotels можно забронировать машину онлайн в любой точке мира, потратив всего 10 минут.
-          </p>
-          <h3>
-            Прокат автомобиля: актуальность услуги
-          </h3>
-          <p>
-            Тем, кто привык перемещаться исключительно на авто, вынужденная поездка на общественном транспорте становится настоящим испытанием. Однако есть и такие ситуации, когда без машины просто нельзя обойтись:
-          </p>
-          <ul>
-            <li>
-              отдых в другой стране, когда хочется увидеть максимум, не привязываясь к экскурсиям;
-            </li>
-            <li>
-              встреча деловых партнеров и организация их трансфера;
-            </li>
-            <li>
-              необходим свадебный кортеж из машин одинаковых моделей или цветов;
-            </li>
-            <li>
-              командировка в другом городе, где все дела нужно решать оперативно;
-            </li>
-          </ul>
-          <p>
-            Услуга проката уже давно является широко доступной — любой пользователь интернетом может подобрать автомобиль со своего компьютера или смартфона. Только представьте, вы прилетаете в аэропорт на другой континент, а в аэропорту вас ожидает машина —- согласитесь, это лучшее начало отпуска!
-          </p>
-       </div>
-        <a class="c-show c-show--left max-767" href="#c-show__hire">
-          <span class="c-show__text" data-collapse="Свернуть">
-            Читать все
-          </span>
-        </a>
+      <div class="c-hire">
+        <div class="c-hire__text">
+          <div class="c-hire__scroll" id="c-show__hire">
+            <p>
+              Сложно переоценить комфорт, который дает автомобиль. Но иногда обстоятельства складываются так, что собственное транспортное средство подвело, и вы вынуждены подстраиваться под ситуацию. Если не хотите с этим мириться, услуга аренды авто как раз для вас. На сайте Planet of Hotels можно забронировать машину онлайн в любой точке мира, потратив всего 10 минут.
+            </p>
+            <h3>
+              Прокат автомобиля: актуальность услуги
+            </h3>
+            <p>
+              Тем, кто привык перемещаться исключительно на авто, вынужденная поездка на общественном транспорте становится настоящим испытанием. Однако есть и такие ситуации, когда без машины просто нельзя обойтись:
+            </p>
+            <ul>
+              <li>
+                отдых в другой стране, когда хочется увидеть максимум, не привязываясь к экскурсиям;
+              </li>
+              <li>
+                встреча деловых партнеров и организация их трансфера;
+              </li>
+              <li>
+                необходим свадебный кортеж из машин одинаковых моделей или цветов;
+              </li>
+              <li>
+                командировка в другом городе, где все дела нужно решать оперативно;
+              </li>
+            </ul>
+            <p>
+              Услуга проката уже давно является широко доступной — любой пользователь интернетом может подобрать автомобиль со своего компьютера или смартфона. Только представьте, вы прилетаете в аэропорт на другой континент, а в аэропорту вас ожидает машина —- согласитесь, это лучшее начало отпуска!
+            </p>
+          </div>
+          <a class="c-show c-show--left max-767" href="#c-show__hire">
+            <span class="c-show__text" data-collapse="Свернуть">
+              Читать все
+            </span>
+          </a>
+        </div>
+        <div class="c-hire__img">
+          <img src="images/all/all-hire.svg" alt="image">
+        </div>
       </div>
-      <div class="c-hire__img">
-        <img src="images/all/all-hire.svg" alt="image">
-      </div>
-     </div>
     </div>
     <!-- Аренда авто Италии - end -->
 
